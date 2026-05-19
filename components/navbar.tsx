@@ -24,7 +24,7 @@ export function Navbar() {
         >
           <span className="mr-1 text-terminal-green">{'>'}</span>
           <span className="font-semibold text-foreground">elijs</span>
-          <span className="font-semibold text-terminal-green">&nbsp;.dev</span>
+          <span className="font-semibold text-terminal-green">.dev</span>
           <span className="ml-1 text-primary">💜</span>
         </Link>
 

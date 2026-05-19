@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
 import { type Guide, getTotalResources } from '@/lib/guides-data'
@@ -32,13 +33,17 @@ export function GuideCard({ guide, index }: GuideCardProps) {
   if (!guideTranslation) return null
 
   return (
-    <Link
-      href={`/guides/${guide.slug}`}
-      className={cn(
-        'group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card p-5 transition-all duration-200',
-        'hover:border-terminal-green hover:bg-card/80',
-      )}
+    <motion.div
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      whileTap={{ scale: 0.98 }}
     >
+      <Link
+        href={`/guides/${guide.slug}`}
+        className={cn(
+          'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-5 transition-all duration-200',
+          'hover:border-terminal-green hover:bg-card/80',
+        )}
+      >
       {/* Header with icon and index */}
       <div className="mb-3 flex items-start justify-between">
         <div className="text-3xl">{guide.icon}</div>
@@ -79,5 +84,6 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-terminal-green transition-all duration-200 group-hover:w-full" />
     </Link>
+    </motion.div>
   )
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Check, Copy, ExternalLink, Heart, Share2, Twitter } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
 import { useFavorites, type FavoriteResource } from '@/lib/favorites'
@@ -46,9 +47,10 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   }
 
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -3, transition: { duration: 0.2 } }}
       className={cn(
-        'group relative flex flex-col rounded border border-border bg-card p-4 transition-all duration-200',
+        'group relative flex flex-col rounded-2xl border border-border bg-card p-4 transition-all duration-200',
         'hover:border-terminal-green'
       )}
     >
@@ -134,6 +136,6 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
         <ExternalLink className="h-3 w-3" />
         {locale === 'es' ? 'Visitar' : 'Visit'}
       </a>
-    </div>
+    </motion.div>
   )
 }

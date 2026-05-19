@@ -7,6 +7,7 @@ import { useLocale } from '@/lib/locale-context'
 import { type Guide, getTotalResources } from '@/lib/guides-data'
 import { SearchInput } from '@/components/search-input'
 import { ResourceCard } from '@/components/resource-card'
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/scroll-animate'
 
 interface GuideContentProps {
   guide: Guide
@@ -60,40 +61,42 @@ export function GuideContent({ guide }: GuideContentProps) {
           </Link>
 
           {/* Title row */}
-          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-            <div className="flex items-start gap-4">
-              <span className="text-5xl">{guide.icon}</span>
-              <div>
-                <h1 className="text-2xl font-bold text-foreground md:text-3xl">
-                  {guideTranslation.title}
-                </h1>
-                <p className="mt-2 max-w-2xl text-muted-foreground">
-                  {guideTranslation.description}
-                </p>
-                <p className="mt-2 text-sm text-terminal-green">
-                  {totalResources} {locale === 'es' ? 'recursos' : 'resources'}
-                </p>
+          <ScrollAnimate variant="fadeInUp">
+            <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div className="flex items-start gap-4">
+                <span className="text-5xl">{guide.icon}</span>
+                <div>
+                  <h1 className="text-2xl font-bold text-foreground md:text-3xl">
+                    {guideTranslation.title}
+                  </h1>
+                  <p className="mt-2 max-w-2xl text-muted-foreground">
+                    {guideTranslation.description}
+                  </p>
+                  <p className="mt-2 text-sm text-terminal-green">
+                    {totalResources} {locale === 'es' ? 'recursos' : 'resources'}
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Share button */}
-            <button
-              onClick={handleCopyPageLink}
-              className="flex items-center gap-2 rounded border border-border px-3 py-2 text-sm text-foreground transition-colors hover:border-terminal-green hover:text-terminal-green"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-4 w-4 text-terminal-green" />
-                  {locale === 'es' ? 'Copiado' : 'Copied'}
-                </>
-              ) : (
-                <>
-                  <Share2 className="h-4 w-4" />
-                  {locale === 'es' ? 'Compartir' : 'Share'}
-                </>
-              )}
-            </button>
-          </div>
+              {/* Share button */}
+              <button
+                onClick={handleCopyPageLink}
+                className="flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm text-foreground transition-colors hover:border-terminal-green hover:text-terminal-green"
+              >
+                {copied ? (
+                  <>
+                    <Check className="h-4 w-4 text-terminal-green" />
+                    {locale === 'es' ? 'Copiado' : 'Copied'}
+                  </>
+                ) : (
+                  <>
+                    <Share2 className="h-4 w-4" />
+                    {locale === 'es' ? 'Compartir' : 'Share'}
+                  </>
+                )}
+              </button>
+            </div>
+          </ScrollAnimate>
         </div>
       </section>
 
@@ -120,22 +123,25 @@ export function GuideContent({ guide }: GuideContentProps) {
             {filteredSections.map((section) => (
               <div key={section.id}>
                 {/* Section title */}
-                <h2 className="mb-6 text-lg font-semibold text-foreground">
-                  <span className="text-terminal-green">#</span>{' '}
-                  {section.title[locale]}
-                </h2>
+                <ScrollAnimate variant="fadeInLeft">
+                  <h2 className="mb-6 text-lg font-semibold text-foreground">
+                    <span className="text-terminal-green">#</span>{' '}
+                    {section.title[locale]}
+                  </h2>
+                </ScrollAnimate>
 
                 {/* Resources grid */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {section.resources.map((resource) => (
-                    <ResourceCard
-                      key={resource.id}
-                      resource={resource}
-                      guideId={guide.id}
-                      guideTitle={guideTranslation.title}
-                    />
+                    <StaggerItem key={resource.id}>
+                      <ResourceCard
+                        resource={resource}
+                        guideId={guide.id}
+                        guideTitle={guideTranslation.title}
+                      />
+                    </StaggerItem>
                   ))}
-                </div>
+                </StaggerContainer>
               </div>
             ))}
           </div>

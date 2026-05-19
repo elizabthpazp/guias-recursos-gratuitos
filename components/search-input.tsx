@@ -20,7 +20,7 @@ export function SearchInput({ value, onChange, placeholder, className }: SearchI
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className={cn(
-          'w-full rounded border border-border bg-card py-2 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground',
+          'w-full rounded-xl border border-border bg-card py-2 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground',
           'focus:border-terminal-green focus:outline-none',
           'transition-colors'
         )}

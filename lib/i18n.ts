@@ -13,8 +13,8 @@ export const translations = {
     home: {
       versionTag: '[ guides_v1.0 // build_2026 ]',
       title: 'Guías de recursos gratuitos para programadores',
-      description: 'Aprende, mejora y crece como dev. Creado con',
-      descriptionEnd: 'para mi audiencia tech.',
+      description: 'Aprende, mejora y crece como dev.',
+      descriptionEnd: 'Creado con 💜 para mi audiencia tech.',
       byLine: '// by elijs.dev',
       exploreGuides: 'Explorar Guías',
       favoritesCount: 'Favoritos',
@@ -118,8 +118,8 @@ export const translations = {
     home: {
       versionTag: '[ guides_v1.0 // build_2026 ]',
       title: 'Free resource guides for programmers',
-      description: 'Learn, improve and grow as a dev. Created with',
-      descriptionEnd: 'for my tech audience.',
+      description: 'Learn, improve and grow as a dev.',
+      descriptionEnd: 'Created with 💜 for my tech audience.',
       byLine: '// by elijs.dev',
       exploreGuides: 'Explore guides',
       favoritesCount: 'Favorites',

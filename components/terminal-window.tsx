@@ -58,7 +58,7 @@ export function TerminalWindow() {
       ]
 
   return (
-    <div className="w-full max-w-xl overflow-hidden rounded-lg border border-border bg-[#0d0d0d] shadow-[0_0_60px_-15px_rgba(34,197,94,0.15)]">
+    <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-[#0d0d0d] shadow-[0_0_60px_-15px_rgba(34,197,94,0.15)] transition-colors duration-200 hover:border-terminal-green">
       {/* Terminal Header */}
       <div className="flex items-center justify-between border-b border-border/70 bg-[#0a0a0a] px-4 py-2.5">
         <div className="flex items-center gap-1.5">
