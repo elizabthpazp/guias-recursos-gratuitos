@@ -46,17 +46,17 @@ export function GuideContent({ guide }: GuideContentProps) {
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       {/* Header */}
-      <section className="border-b border-border bg-card">
-        <div className="mx-auto max-w-6xl px-4 py-8">
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-8">
           {/* Back link */}
           <Link
             href="/"
-            className="mb-6 inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-terminal-green"
+            className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-terminal-green"
           >
             <ArrowLeft className="h-4 w-4" />
-            {t.guide.backToHome}
+            {locale === 'es' ? 'Volver al inicio' : 'Back to home'}
           </Link>
 
           {/* Title row */}
@@ -64,14 +64,14 @@ export function GuideContent({ guide }: GuideContentProps) {
             <div className="flex items-start gap-4">
               <span className="text-5xl">{guide.icon}</span>
               <div>
-                <h1 className="font-mono text-2xl font-bold text-foreground md:text-3xl">
+                <h1 className="text-2xl font-bold text-foreground md:text-3xl">
                   {guideTranslation.title}
                 </h1>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
                   {guideTranslation.description}
                 </p>
-                <p className="mt-2 font-mono text-sm text-terminal-cyan">
-                  {totalResources} {t.guide.resources}
+                <p className="mt-2 text-sm text-terminal-green">
+                  {totalResources} {locale === 'es' ? 'recursos' : 'resources'}
                 </p>
               </div>
             </div>
@@ -79,17 +79,17 @@ export function GuideContent({ guide }: GuideContentProps) {
             {/* Share button */}
             <button
               onClick={handleCopyPageLink}
-              className="flex items-center gap-2 rounded-md border border-border bg-secondary px-3 py-2 font-mono text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="flex items-center gap-2 rounded border border-border px-3 py-2 text-sm text-foreground transition-colors hover:border-terminal-green hover:text-terminal-green"
             >
               {copied ? (
                 <>
                   <Check className="h-4 w-4 text-terminal-green" />
-                  {t.guide.linkCopied}
+                  {locale === 'es' ? 'Copiado' : 'Copied'}
                 </>
               ) : (
                 <>
                   <Share2 className="h-4 w-4" />
-                  {t.guide.share}
+                  {locale === 'es' ? 'Compartir' : 'Share'}
                 </>
               )}
             </button>
@@ -98,18 +98,18 @@ export function GuideContent({ guide }: GuideContentProps) {
       </section>
 
       {/* Content */}
-      <section className="mx-auto max-w-6xl px-4 py-8">
+      <section className="mx-auto max-w-7xl px-6 py-8">
         {/* Search */}
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <SearchInput
             value={search}
             onChange={setSearch}
-            placeholder={t.guide.searchPlaceholder}
+            placeholder={locale === 'es' ? 'Buscar recursos...' : 'Search resources...'}
             className="md:w-80"
           />
           {search && (
-            <p className="font-mono text-sm text-muted-foreground">
-              {filteredResourcesCount} {t.guide.resources}
+            <p className="text-sm text-muted-foreground">
+              {filteredResourcesCount} {locale === 'es' ? 'resultados' : 'results'}
             </p>
           )}
         </div>
@@ -120,13 +120,13 @@ export function GuideContent({ guide }: GuideContentProps) {
             {filteredSections.map((section) => (
               <div key={section.id}>
                 {/* Section title */}
-                <h2 className="mb-6 font-mono text-lg font-bold text-foreground">
+                <h2 className="mb-6 text-lg font-semibold text-foreground">
                   <span className="text-terminal-green">#</span>{' '}
                   {section.title[locale]}
                 </h2>
 
                 {/* Resources grid */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {section.resources.map((resource) => (
                     <ResourceCard
                       key={resource.id}
@@ -141,14 +141,14 @@ export function GuideContent({ guide }: GuideContentProps) {
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center py-16 text-center">
-            <p className="font-mono text-lg text-muted-foreground">
-              {t.guide.noResults}
+            <p className="text-base text-muted-foreground">
+              {locale === 'es' ? 'No se encontraron recursos' : 'No resources found'}
             </p>
             <button
               onClick={() => setSearch('')}
-              className="mt-4 font-mono text-sm text-terminal-cyan transition-colors hover:text-terminal-green"
+              className="mt-4 text-sm text-terminal-green transition-colors hover:underline"
             >
-              [Clear search]
+              [{locale === 'es' ? 'Limpiar búsqueda' : 'Clear search'}]
             </button>
           </div>
         )}

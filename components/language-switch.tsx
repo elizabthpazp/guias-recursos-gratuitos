@@ -7,24 +7,25 @@ export function LanguageSwitch() {
   const { locale, setLocale } = useLocale()
 
   return (
-    <div className="flex items-center gap-1 rounded-md border border-border bg-secondary p-1 font-mono text-xs">
+    <div className="flex items-center gap-0 rounded border border-border text-xs">
       <button
         onClick={() => setLocale('es')}
         className={cn(
-          'rounded px-2 py-1 transition-colors',
+          'px-2.5 py-1.5 transition-colors',
           locale === 'es'
-            ? 'bg-primary text-primary-foreground'
+            ? 'bg-foreground text-background'
             : 'text-muted-foreground hover:text-foreground'
         )}
       >
         ES
       </button>
+      <span className="text-muted-foreground">|</span>
       <button
         onClick={() => setLocale('en')}
         className={cn(
-          'rounded px-2 py-1 transition-colors',
+          'px-2.5 py-1.5 transition-colors',
           locale === 'en'
-            ? 'bg-primary text-primary-foreground'
+            ? 'bg-foreground text-background'
             : 'text-muted-foreground hover:text-foreground'
         )}
       >

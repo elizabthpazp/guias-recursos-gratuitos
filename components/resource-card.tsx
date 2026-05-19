@@ -14,7 +14,7 @@ interface ResourceCardProps {
 }
 
 export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProps) {
-  const { t } = useLocale()
+  const { locale, t } = useLocale()
   const { isFavorite, toggleFavorite } = useFavorites()
   const [copied, setCopied] = useState(false)
   const [showShare, setShowShare] = useState(false)
@@ -48,16 +48,16 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   return (
     <div
       className={cn(
-        'group relative flex flex-col rounded-md border border-border bg-card p-4 transition-all',
-        'hover:border-terminal-green/50 hover:bg-card/80'
+        'group relative flex flex-col rounded border border-border bg-card p-4 transition-all duration-200',
+        'hover:border-terminal-green'
       )}
     >
       {/* Header */}
       <div className="mb-2 flex items-start justify-between gap-2">
-        <h4 className="font-mono text-sm font-semibold text-foreground group-hover:text-terminal-green">
+        <h4 className="text-sm font-semibold text-foreground group-hover:text-terminal-green">
           {resource.name}
         </h4>
-        <div className="flex items-center gap-1">
+        <div className="flex shrink-0 items-center gap-1">
           {/* Favorite button */}
           <button
             onClick={handleToggleFavorite}
@@ -65,7 +65,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
               'rounded p-1 transition-colors',
               favorite
                 ? 'text-primary'
-                : 'text-muted-foreground hover:text-primary'
+                : 'text-terminal-dim hover:text-primary'
             )}
             title={favorite ? t.guide.removeFromFavorites : t.guide.addToFavorites}
           >
@@ -76,7 +76,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
           <div className="relative">
             <button
               onClick={() => setShowShare(!showShare)}
-              className="rounded p-1 text-muted-foreground transition-colors hover:text-terminal-cyan"
+              className="rounded p-1 text-terminal-dim transition-colors hover:text-terminal-cyan"
               title={t.guide.share}
             >
               <Share2 className="h-4 w-4" />
@@ -87,13 +87,13 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
                   className="fixed inset-0 z-10"
                   onClick={() => setShowShare(false)}
                 />
-                <div className="absolute right-0 top-full z-20 mt-1 flex flex-col gap-1 rounded-md border border-border bg-popover p-2 shadow-lg">
+                <div className="absolute right-0 top-full z-20 mt-1 flex flex-col gap-1 rounded border border-border bg-card p-2 shadow-lg">
                   <button
                     onClick={() => {
                       handleCopyLink()
                       setShowShare(false)
                     }}
-                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 font-mono text-xs text-foreground transition-colors hover:bg-secondary"
+                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
                   >
                     {copied ? (
                       <Check className="h-3 w-3 text-terminal-green" />
@@ -107,7 +107,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
                       shareOnTwitter()
                       setShowShare(false)
                     }}
-                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 font-mono text-xs text-foreground transition-colors hover:bg-secondary"
+                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
                   >
                     <Twitter className="h-3 w-3" />
                     Twitter
@@ -120,7 +120,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
       </div>
 
       {/* Description */}
-      <p className="mb-3 flex-1 text-sm text-muted-foreground">
+      <p className="mb-3 flex-1 text-sm leading-relaxed text-muted-foreground">
         {resource.description}
       </p>
 
@@ -129,10 +129,10 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
         href={resource.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1 font-mono text-xs text-terminal-cyan transition-colors hover:text-terminal-green"
+        className="flex items-center gap-1 text-xs text-terminal-green transition-colors hover:underline"
       >
         <ExternalLink className="h-3 w-3" />
-        {t.guide.visit}
+        {locale === 'es' ? 'Visitar' : 'Visit'}
       </a>
     </div>
   )

@@ -13,17 +13,18 @@ const socials = [
 ]
 
 export function Footer() {
-  const { t } = useLocale()
+  const { locale, t } = useLocale()
 
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="mx-auto max-w-6xl px-4 py-8">
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto max-w-7xl px-6 py-8">
         <div className="flex flex-col items-center gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2 font-mono text-lg font-bold text-foreground">
+          <div className="flex items-center gap-1 text-base">
             <span className="text-terminal-green">{'>'}</span>
-            <span>elijs.dev</span>
-            <span className="text-primary">{'</>'}</span>
+            <span className="font-semibold text-foreground">elijs</span>
+            <span className="font-semibold text-terminal-green">.dev</span>
+            <span className="ml-1 text-primary">{'💜'}</span>
           </div>
 
           {/* Social Links */}
@@ -34,7 +35,7 @@ export function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-sm text-muted-foreground transition-colors hover:text-terminal-cyan"
+                className="text-sm text-muted-foreground transition-colors hover:text-terminal-green"
               >
                 {social.name}
               </a>
@@ -46,30 +47,30 @@ export function Footer() {
             href="https://buymeacoffee.com/elizabethph"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-md border border-primary bg-primary/10 px-4 py-2 font-mono text-sm text-primary transition-colors hover:bg-primary/20"
+            className="flex items-center gap-2 rounded border border-terminal-yellow bg-terminal-yellow/10 px-4 py-2 text-sm text-terminal-yellow transition-colors hover:bg-terminal-yellow/20"
           >
             <Coffee className="h-4 w-4" />
             {t.footer.support}
           </a>
 
           {/* Made with love */}
-          <p className="flex items-center gap-1 font-mono text-sm text-muted-foreground">
+          <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
             {t.footer.madeWith}{' '}
-            <Heart className="h-4 w-4 fill-primary text-primary" />{' '}
+            <Heart className="h-3.5 w-3.5 fill-primary text-primary" />{' '}
             {t.footer.by}{' '}
             <a
               href="https://www.elijs.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-terminal-green transition-colors hover:text-terminal-cyan"
+              className="text-terminal-green hover:underline"
             >
               @elijs.dev
             </a>
           </p>
 
           {/* Copyright */}
-          <p className="font-mono text-xs text-terminal-dim">
-            &copy; {new Date().getFullYear()} elijs.dev
+          <p className="text-xs text-terminal-dim">
+            &copy; {new Date().getFullYear()} elijs.dev • {locale === 'es' ? 'Todos los derechos reservados' : 'All rights reserved'}
           </p>
         </div>
       </div>

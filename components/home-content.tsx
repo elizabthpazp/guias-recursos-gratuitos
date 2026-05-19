@@ -5,6 +5,7 @@ import { useLocale } from '@/lib/locale-context'
 import { getAllGuides } from '@/lib/guides-data'
 import { GuideCard } from './guide-card'
 import { SearchInput } from './search-input'
+import { TerminalWindow } from './terminal-window'
 
 export function HomeContent() {
   const { locale, t } = useLocale()
@@ -24,53 +25,55 @@ export function HomeContent() {
   }, [guides, search, t.guides])
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-border bg-card">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          {/* Terminal decoration */}
-          <div className="mb-6 font-mono text-sm text-terminal-dim">
-            <span className="text-terminal-green">user@elijs.dev</span>
-            <span className="text-muted-foreground">:</span>
-            <span className="text-terminal-cyan">~</span>
-            <span className="text-muted-foreground">$</span>
-            <span className="ml-2 text-foreground">cat resources.md</span>
-            <span className="animate-blink ml-1 text-terminal-green">_</span>
+      <section className="relative min-h-[70vh] overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Left: Text Content */}
+            <div>
+              {/* Version tag */}
+              <div className="mb-8 text-sm text-terminal-green">
+                {'>'}_{'  '}[ GUIDES_V1.0 // BUILD_2026 ]
+              </div>
+
+              {/* Main Title */}
+              <h1 className="mb-6 text-4xl font-bold leading-tight text-terminal-green md:text-5xl lg:text-6xl">
+                <span className="text-terminal-green">{'>'}</span>
+                <span className="text-terminal-red">_</span>{' '}
+                {t.home.title}
+              </h1>
+
+              {/* Blinking underscore */}
+              <div className="mb-6">
+                <span className="animate-blink text-2xl text-terminal-green">_</span>
+              </div>
+
+              {/* Subtitle */}
+              <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
+                {t.home.description}{' '}
+                <span className="text-primary">{'💜'}</span>{' '}
+                {locale === 'es' ? 'para mi audiencia tech.' : 'for my tech audience.'}
+              </p>
+            </div>
+
+            {/* Right: Terminal Window */}
+            <div className="hidden justify-end lg:flex">
+              <TerminalWindow />
+            </div>
           </div>
-
-          {/* Title */}
-          <h1 className="mb-4 font-mono text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-            <span className="text-terminal-green">{'>'}</span>{' '}
-            {t.home.title}
-            <span className="text-primary">_</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mb-8 max-w-2xl font-mono text-lg text-terminal-cyan md:text-xl">
-            {t.home.subtitle}
-          </p>
-
-          {/* Description */}
-          <p className="max-w-3xl text-muted-foreground">
-            {t.home.description}
-          </p>
-        </div>
-
-        {/* Background decoration */}
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 font-mono text-[200px] font-bold text-border/20 select-none">
-          {'</>'}
         </div>
       </section>
 
       {/* Guides Section */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
+      <section className="mx-auto max-w-7xl px-6 py-12">
         {/* Section header with search */}
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="font-mono text-2xl font-bold text-foreground">
+            <h2 className="text-xl font-semibold text-foreground">
               <span className="text-terminal-green">#</span> {t.home.allGuides}
             </h2>
-            <p className="mt-1 font-mono text-sm text-muted-foreground">
+            <p className="mt-1 text-sm text-muted-foreground">
               {guides.length} {t.home.resources}
             </p>
           </div>
@@ -84,21 +87,21 @@ export function HomeContent() {
 
         {/* Guides grid */}
         {filteredGuides.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredGuides.map((guide, index) => (
               <GuideCard key={guide.id} guide={guide} index={index} />
             ))}
           </div>
         ) : (
           <div className="flex flex-col items-center justify-center py-16 text-center">
-            <p className="font-mono text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               {t.home.noResults}
             </p>
             <button
               onClick={() => setSearch('')}
-              className="mt-4 font-mono text-sm text-terminal-cyan transition-colors hover:text-terminal-green"
+              className="mt-4 text-sm text-terminal-green transition-colors hover:underline"
             >
-              [Clear search]
+              [{locale === 'es' ? 'Limpiar búsqueda' : 'Clear search'}]
             </button>
           </div>
         )}
