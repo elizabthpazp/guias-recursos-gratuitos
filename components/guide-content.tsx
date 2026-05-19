@@ -81,7 +81,7 @@ export function GuideContent({ guide }: GuideContentProps) {
               {/* Share button */}
               <button
                 onClick={handleCopyPageLink}
-                className="flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm text-foreground transition-colors hover:border-terminal-green hover:text-terminal-green"
+                className="cursor-pointer flex items-center gap-2 rounded-xl border border-border px-3 py-2 text-sm text-foreground transition-colors hover:border-terminal-green hover:text-terminal-green"
               >
                 {copied ? (
                   <>

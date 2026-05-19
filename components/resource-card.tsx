@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, Copy, ExternalLink, Heart, Share2, Twitter } from 'lucide-react'
+import { Check, Copy, ExternalLink, Heart, Share2 } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
 import { useFavorites, type FavoriteResource } from '@/lib/favorites'
 import { type Resource } from '@/lib/guides-data'
@@ -40,9 +40,9 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
     toggleFavorite(favoriteResource)
   }
 
-  const shareOnTwitter = () => {
+  const shareOnX = () => {
     const text = `Check out ${resource.name}: ${resource.description}`
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(resource.url)}`
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(resource.url)}`
     window.open(url, '_blank')
   }
 
@@ -64,7 +64,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
           <button
             onClick={handleToggleFavorite}
             className={cn(
-              'rounded p-1 transition-colors',
+              'cursor-pointer rounded p-1 transition-colors',
               favorite
                 ? 'text-primary'
                 : 'text-terminal-dim hover:text-primary'
@@ -78,7 +78,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
           <div className="relative">
             <button
               onClick={() => setShowShare(!showShare)}
-              className="rounded p-1 text-terminal-dim transition-colors hover:text-terminal-cyan"
+              className="cursor-pointer rounded p-1 text-terminal-dim transition-colors hover:text-terminal-cyan"
               title={t.guide.share}
             >
               <Share2 className="h-4 w-4" />
@@ -95,7 +95,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
                       handleCopyLink()
                       setShowShare(false)
                     }}
-                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
+                    className="cursor-pointer flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
                   >
                     {copied ? (
                       <Check className="h-3 w-3 text-terminal-green" />
@@ -106,13 +106,15 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
                   </button>
                   <button
                     onClick={() => {
-                      shareOnTwitter()
+                      shareOnX()
                       setShowShare(false)
                     }}
-                    className="flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
+                    className="cursor-pointer flex items-center gap-2 whitespace-nowrap rounded px-2 py-1 text-xs text-foreground transition-colors hover:bg-secondary"
                   >
-                    <Twitter className="h-3 w-3" />
-                    Twitter
+                    <svg className="h-3 w-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                    X
                   </button>
                 </div>
               </>
