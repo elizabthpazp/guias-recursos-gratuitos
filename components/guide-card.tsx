@@ -33,22 +33,22 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       </div>
 
       {/* Title */}
-      <h3 className="mb-2 text-base font-semibold text-foreground group-hover:text-terminal-green">
+      <h3 className="mb-2 font-mono text-base font-semibold text-foreground group-hover:text-terminal-green">
         {guideTranslation.title}
       </h3>
 
       {/* Description */}
-      <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+      <p className="mb-4 flex-1 font-mono text-xs leading-relaxed text-muted-foreground">
         {guideTranslation.description}
       </p>
 
       {/* Footer */}
-      <div className="flex items-center justify-between text-xs">
+      <div className="flex items-center justify-between font-mono text-xs">
         <span className="text-terminal-dim">
-          {totalResources} {locale === 'es' ? 'recursos' : 'resources'}
+          // {totalResources} {locale === 'es' ? 'recursos' : 'resources'}
         </span>
         <span className="flex items-center gap-1 text-terminal-green opacity-0 transition-opacity group-hover:opacity-100">
-          {locale === 'es' ? 'Ver guía' : 'View guide'}
+          {'>'}_{locale === 'es' ? 'abrir' : 'open'}
           <ArrowRight className="h-3 w-3" />
         </span>
       </div>

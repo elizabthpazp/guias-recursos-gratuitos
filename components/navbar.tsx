@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Heart, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { useLocale } from '@/lib/locale-context'
 import { LanguageSwitch } from './language-switch'
@@ -36,7 +36,7 @@ export function Navbar() {
               pathname === '/' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
             )}
           >
-            HOME
+            {t.nav.home}
           </Link>
           <Link
             href="/favorites"
@@ -45,7 +45,6 @@ export function Navbar() {
               pathname === '/favorites' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
             )}
           >
-            <Heart className="h-3.5 w-3.5" />
             {t.nav.favorites}
           </Link>
 
@@ -74,7 +73,7 @@ export function Navbar() {
                 pathname === '/' ? 'text-foreground' : 'text-muted-foreground'
               )}
             >
-              HOME
+              {t.nav.home}
             </Link>
             <Link
               href="/favorites"
@@ -84,7 +83,6 @@ export function Navbar() {
                 pathname === '/favorites' ? 'text-foreground' : 'text-muted-foreground'
               )}
             >
-              <Heart className="h-3.5 w-3.5" />
               {t.nav.favorites}
             </Link>
 

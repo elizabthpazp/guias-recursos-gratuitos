@@ -4,26 +4,27 @@ export const translations = {
   es: {
     // Navigation
     nav: {
-      home: 'Inicio',
-      guides: 'Guias',
-      favorites: 'Favoritos',
+      home: 'INICIO',
+      guides: 'GUIAS',
+      favorites: 'FAVORITOS',
       language: 'Idioma',
     },
     // Home
     home: {
       title: 'Recursos de Programacion',
-      subtitle: 'Guias gratuitas para aprender a programar',
-      description: 'Coleccion curada de recursos gratuitos para desarrolladores. Desde juegos para aprender a programar hasta guias avanzadas de optimizacion web.',
+      subtitle: 'Aprende a programar gratis',
+      description: 'Guias gratuitas de recursos para aprender a programar. Hechas con',
       viewGuide: 'Ver guia',
       resources: 'recursos',
       searchPlaceholder: 'Buscar guias...',
-      allGuides: 'Todas las Guias',
+      allGuides: 'GUIAS_DISPONIBLES',
       noResults: 'No se encontraron guias',
+      clearSearch: 'Limpiar busqueda',
     },
     // Guide pages
     guide: {
-      backToHome: 'Volver al inicio',
-      searchPlaceholder: 'Buscar recursos...',
+      backToHome: 'cd ..',
+      searchPlaceholder: 'grep -i "recurso"',
       copyLink: 'Copiar enlace',
       share: 'Compartir',
       addToFavorites: 'Agregar a favoritos',
@@ -35,7 +36,7 @@ export const translations = {
     },
     // Favorites
     favorites: {
-      title: 'Mis Favoritos',
+      title: 'MIS_FAVORITOS',
       empty: 'No tienes favoritos guardados',
       emptyDesc: 'Explora las guias y agrega recursos a tus favoritos',
       explore: 'Explorar guias',
@@ -46,6 +47,18 @@ export const translations = {
       by: 'por',
       support: 'Apoyame',
     },
+    // Terminal
+    terminal: {
+      title: 'elijs@dev:~$',
+      commands: [
+        '$ cat recursos.txt',
+        '> Cargando guias de programacion...',
+        '> [OK] 5 guias encontradas',
+        '> [OK] Recursos listos',
+        '$ echo "Happy coding!"',
+        '> Happy coding! 💜',
+      ],
+    },
     // Guides metadata
     guides: {
       'learn-programming-games': {
@@ -53,11 +66,11 @@ export const translations = {
         description: 'Plataformas para dominar lenguajes de programacion mientras te diviertes superando retos y niveles.',
       },
       'improve-programming-2026': {
-        title: 'Guia para Mejorar en Programacion en 2026',
+        title: 'Guia para Mejorar en Programacion 2026',
         description: 'Tu valor ya no reside en recordar la sintaxis, sino en tu capacidad para disenar soluciones y resolver problemas complejos.',
       },
       'free-resources-2026': {
-        title: 'Recursos Gratuitos para Programar en 2026',
+        title: 'Recursos Gratuitos para Programar 2026',
         description: 'Recopilacion de plataformas y cursos especificos para convertirte en desarrollador Frontend, Backend o Fullstack.',
       },
       'frontend-react-project': {
@@ -73,26 +86,27 @@ export const translations = {
   en: {
     // Navigation
     nav: {
-      home: 'Home',
-      guides: 'Guides',
-      favorites: 'Favorites',
+      home: 'HOME',
+      guides: 'GUIDES',
+      favorites: 'FAVORITES',
       language: 'Language',
     },
     // Home
     home: {
       title: 'Programming Resources',
-      subtitle: 'Free guides to learn programming',
-      description: 'Curated collection of free resources for developers. From games to learn programming to advanced web optimization guides.',
+      subtitle: 'Learn to code for free',
+      description: 'Free resource guides to learn programming. Made with',
       viewGuide: 'View guide',
       resources: 'resources',
       searchPlaceholder: 'Search guides...',
-      allGuides: 'All Guides',
+      allGuides: 'AVAILABLE_GUIDES',
       noResults: 'No guides found',
+      clearSearch: 'Clear search',
     },
     // Guide pages
     guide: {
-      backToHome: 'Back to home',
-      searchPlaceholder: 'Search resources...',
+      backToHome: 'cd ..',
+      searchPlaceholder: 'grep -i "resource"',
       copyLink: 'Copy link',
       share: 'Share',
       addToFavorites: 'Add to favorites',
@@ -104,7 +118,7 @@ export const translations = {
     },
     // Favorites
     favorites: {
-      title: 'My Favorites',
+      title: 'MY_FAVORITES',
       empty: 'No favorites saved',
       emptyDesc: 'Explore guides and add resources to your favorites',
       explore: 'Explore guides',
@@ -115,6 +129,18 @@ export const translations = {
       by: 'by',
       support: 'Support me',
     },
+    // Terminal
+    terminal: {
+      title: 'elijs@dev:~$',
+      commands: [
+        '$ cat resources.txt',
+        '> Loading programming guides...',
+        '> [OK] 5 guides found',
+        '> [OK] Resources ready',
+        '$ echo "Happy coding!"',
+        '> Happy coding! 💜',
+      ],
+    },
     // Guides metadata
     guides: {
       'learn-programming-games': {
@@ -122,11 +148,11 @@ export const translations = {
         description: 'Platforms to master programming languages while having fun overcoming challenges and levels.',
       },
       'improve-programming-2026': {
-        title: 'Guide to Improve Programming in 2026',
+        title: 'Guide to Improve Programming 2026',
         description: 'Your value no longer lies in remembering syntax, but in your ability to design solutions and solve complex problems.',
       },
       'free-resources-2026': {
-        title: 'Free Resources for Programming in 2026',
+        title: 'Free Resources for Programming 2026',
         description: 'Collection of platforms and specific courses to become a Frontend, Backend or Fullstack developer.',
       },
       'frontend-react-project': {
