@@ -24,6 +24,13 @@ export function HomeContent() {
     })
   }, [guides, search, t.guides])
 
+  // Count total resources
+  const totalResources = useMemo(() => {
+    return guides.reduce((acc, guide) => {
+      return acc + guide.sections.reduce((sAcc, section) => sAcc + section.resources.length, 0)
+    }, 0)
+  }, [guides])
+
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -34,27 +41,38 @@ export function HomeContent() {
             <div>
               {/* Version tag */}
               <div className="mb-6 font-mono text-sm text-terminal-green">
-                {'>'}_{'  '}[ GUIDES_V1.0 // BUILD_2026 ]
+                {'>'}_ {t.home.versionTag}
               </div>
 
-              {/* Main Title */}
-              <h1 className="mb-4 font-mono text-3xl font-bold leading-tight text-terminal-green md:text-4xl lg:text-5xl">
-                <span className="text-terminal-green">{'>'}</span>
-                <span className="text-primary">_</span>{' '}
+              {/* Main Title - WHITE */}
+              <h1 className="mb-4 font-mono text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
                 {t.home.title}
               </h1>
 
-              {/* Blinking underscore */}
-              <div className="mb-4">
-                <span className="animate-blink font-mono text-xl text-terminal-green">_</span>
-              </div>
-
               {/* Subtitle */}
-              <p className="max-w-lg font-mono text-sm leading-relaxed text-muted-foreground md:text-base">
+              <p className="mb-4 max-w-lg font-mono text-sm leading-relaxed text-muted-foreground md:text-base">
                 {t.home.description}{' '}
                 <span className="text-primary">{'<3'}</span>{' '}
                 {locale === 'es' ? 'para mi audiencia tech.' : 'for my tech audience.'}
               </p>
+
+              {/* By line */}
+              <p className="mb-8 font-mono text-sm text-muted-foreground">
+                {t.home.byLine} <span className="text-primary">{'<3'}</span>
+              </p>
+
+              {/* Stats */}
+              <div className="flex flex-wrap gap-6 font-mono text-sm">
+                <a href="#guides" className="text-terminal-green transition-colors hover:underline">
+                  {t.home.exploreGuides}
+                </a>
+                <span className="text-muted-foreground">
+                  {t.home.guidesCount}: <span className="text-foreground">{guides.length}</span>
+                </span>
+                <span className="text-muted-foreground">
+                  {t.home.resourcesCount}: <span className="text-foreground">{totalResources}</span>
+                </span>
+              </div>
             </div>
 
             {/* Right: Terminal Window */}
@@ -66,7 +84,7 @@ export function HomeContent() {
       </section>
 
       {/* Guides Section */}
-      <section className="mx-auto max-w-7xl px-6 py-12">
+      <section id="guides" className="mx-auto max-w-7xl px-6 py-12">
         {/* Section header with search */}
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
