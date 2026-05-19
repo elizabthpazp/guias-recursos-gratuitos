@@ -12,7 +12,7 @@ Aprende, mejora y crece como dev. Recursos curados con amor para la comunidad te
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Deploy](https://img.shields.io/badge/Deploy-Vercel-000?style=flat-square&logo=vercel)](https://vercel.com/)
 
-[🌐 Ver sitio en vivo](https://elijs.dev) · [🐛 Reportar bug](../../issues) · [✨ Sugerir recurso](../../issues)
+[🌐 Ver sitio en vivo](https://recursos.elijs.dev/) · [🐛 Reportar bug](../../issues) · [✨ Sugerir recurso](../../issues)
 
 </div>
 

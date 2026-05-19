@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'elijs.dev | Recursos de Programacion',
-  description: 'Guias gratuitas y recursos curados para aprender a programar. Desde juegos para aprender codigo hasta guias avanzadas de optimizacion web.',
+  description: 'Guias gratuitas y recursos para aprender a programar. Desde juegos para aprender codigo hasta guias avanzadas de optimizacion web.',
   keywords: ['programacion', 'desarrollo web', 'recursos gratuitos', 'aprender a programar', 'frontend', 'backend', 'fullstack', 'react', 'javascript'],
   authors: [{ name: 'elijs.dev', url: 'https://www.elijs.dev/' }],
   creator: 'elijs.dev',
@@ -25,31 +25,31 @@ export const metadata: Metadata = {
     alternateLocale: 'en_US',
     url: 'https://elijs.dev',
     title: 'elijs.dev | Recursos de Programacion',
-    description: 'Guias gratuitas y recursos curados para aprender a programar.',
+    description: 'Guias gratuitas y recursos para aprender a programar.',
     siteName: 'elijs.dev',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'elijs.dev | Recursos de Programacion',
-    description: 'Guias gratuitas y recursos curados para aprender a programar.',
+    description: 'Guias gratuitas y recursos para aprender a programar.',
     creator: '@elijsdev',
   },
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/fav.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/fav.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/fav.png',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/fav.png',
   },
 }
 
