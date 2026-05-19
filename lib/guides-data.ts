@@ -1042,6 +1042,339 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    id: 'portfolio-resources',
+    slug: 'portfolio-resources',
+    icon: '💼',
+    sections: [
+      {
+        id: 'learning-platforms-portfolio',
+        title: {
+          es: 'Plataformas de Aprendizaje Integral',
+          en: 'Comprehensive Learning Platforms',
+        },
+        resources: [
+          {
+            id: 'freecodecamp-portfolio',
+            name: 'FreeCodeCamp',
+            description: 'Certificaciones gratuitas desde diseno web responsivo hasta analisis de datos.',
+            url: 'https://www.freecodecamp.org',
+          },
+          {
+            id: 'odin-portfolio',
+            name: 'The Odin Project',
+            description: 'Curriculo ultra completo para Full Stack (JavaScript o Ruby on Rails).',
+            url: 'https://www.theodinproject.com',
+          },
+          {
+            id: 'fullstack-open',
+            name: 'Full Stack Open',
+            description: 'Curso de nivel universitario sobre desarrollo web moderno (React, Redux, Node.js, MongoDB, GraphQL).',
+            url: 'https://fullstackopen.com',
+          },
+        ],
+      },
+      {
+        id: 'challenges-projects',
+        title: {
+          es: 'Desafios y Proyectos Practicos',
+          en: 'Challenges & Practical Projects',
+        },
+        resources: [
+          {
+            id: 'frontend-mentor',
+            name: 'Frontend Mentor',
+            description: 'Te dan el diseno y tu construyes el codigo. Ideal para mejorar en CSS y maquetacion.',
+            url: 'https://www.frontendmentor.io',
+          },
+          {
+            id: 'roadmap-projects',
+            name: 'Roadmap.sh Projects',
+            description: 'Ideas de proyectos divididas por nivel (principiante, intermedio, avanzado).',
+            url: 'https://roadmap.sh/projects',
+          },
+          {
+            id: 'briefsupply',
+            name: 'BriefSupply',
+            description: 'Te entrega "briefs" como si fueran de un cliente real. Perfecto para simular experiencia laboral.',
+            url: 'https://briefsupply.com/projects',
+          },
+          {
+            id: 'codementor-projects',
+            name: 'Codementor Projects',
+            description: 'Proyectos reales para practicar. Puedes ver como otros los resolvieron.',
+            url: 'https://www.codementor.io/projects',
+          },
+        ],
+      },
+      {
+        id: 'github-repos-ideas',
+        title: {
+          es: 'Repos de GitHub con Listas de Ideas y Retos',
+          en: 'GitHub Repos with Ideas & Challenges',
+        },
+        resources: [
+          {
+            id: 'app-ideas',
+            name: 'App Ideas (Florin Pop)',
+            description: 'Lista gigante de aplicaciones clasificadas por dificultad con requerimientos minimos.',
+            url: 'https://github.com/florinpop17/app-ideas',
+          },
+          {
+            id: 'build-your-own-x',
+            name: 'Build Your Own X',
+            description: 'Aprende a construir desde cero cosas como un servidor Git, un Docker o un motor de busqueda.',
+            url: 'https://github.com/codecrafters-io/build-your-own-x',
+          },
+          {
+            id: 'project-ideas-resources',
+            name: 'Project Ideas & Resources',
+            description: 'Repositorio con muchas ideas variadas y recursos extra.',
+            url: 'https://github.com/The-Cool-Coders/Project-Ideas-And-Resources',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cv-portfolio-github',
+    slug: 'cv-portfolio-github',
+    icon: '📂',
+    sections: [
+      {
+        id: 'planning-roadmaps',
+        title: {
+          es: 'Planificacion y Rutas de Aprendizaje',
+          en: 'Planning & Learning Roadmaps',
+        },
+        resources: [
+          {
+            id: 'developer-roadmap',
+            name: 'Developer Roadmap',
+            description: 'Guias interactivas y caminos detallados para entender que tecnologias aprender segun tu rol.',
+            url: 'https://github.com/nilbuild/developer-roadmap',
+          },
+        ],
+      },
+      {
+        id: 'project-ideas-real',
+        title: {
+          es: 'Ideas de Proyectos Reales',
+          en: 'Real Project Ideas',
+        },
+        resources: [
+          {
+            id: 'app-ideas-collection',
+            name: 'App Ideas Collection',
+            description: 'Lista de aplicaciones clasificadas por nivel de dificultad con requerimientos claros.',
+            url: 'https://github.com/florinpop17/app-ideas',
+          },
+        ],
+      },
+      {
+        id: 'project-based-learning',
+        title: {
+          es: 'Aprendizaje Basado en Proyectos',
+          en: 'Project Based Learning',
+        },
+        resources: [
+          {
+            id: 'project-based-learning-repo',
+            name: 'Project Based Learning',
+            description: 'Lista curada de tutoriales donde aprendes lenguajes creando aplicaciones reales.',
+            url: 'https://github.com/practical-tutorials/project-based-learning',
+          },
+        ],
+      },
+      {
+        id: 'understand-internals',
+        title: {
+          es: 'Entiende la "Magia" Interna',
+          en: 'Understand the "Magic" Inside',
+        },
+        resources: [
+          {
+            id: 'build-your-own-x-2',
+            name: 'Build Your Own X',
+            description: 'Aprende a recrear tecnologias famosas desde cero (Docker, Git, motor de busqueda).',
+            url: 'https://github.com/codecrafters-io/build-your-own-x',
+          },
+        ],
+      },
+      {
+        id: 'data-for-apps',
+        title: {
+          es: 'Datos para tus Aplicaciones',
+          en: 'Data for Your Apps',
+        },
+        resources: [
+          {
+            id: 'public-apis',
+            name: 'Public APIs',
+            description: 'Directorio masivo de APIs gratuitas (clima, musica, finanzas) para proyectos profesionales.',
+            url: 'https://github.com/public-apis/public-apis',
+          },
+        ],
+      },
+      {
+        id: 'interview-prep',
+        title: {
+          es: 'Preparacion para Entrevistas Tecnicas',
+          en: 'Technical Interview Preparation',
+        },
+        resources: [
+          {
+            id: 'coding-interview-university',
+            name: 'Coding Interview University',
+            description: 'Plan de estudio completo de Ciencias de la Computacion para grandes empresas tech.',
+            url: 'https://github.com/jwasham/coding-interview-university',
+          },
+        ],
+      },
+      {
+        id: 'awesome-resources',
+        title: {
+          es: 'Recursos Curados (The "Awesome" List)',
+          en: 'Curated Resources (The "Awesome" List)',
+        },
+        resources: [
+          {
+            id: 'awesome-list',
+            name: 'Awesome Resources',
+            description: 'La famosa "lista de listas". Recursos curados de cualquier lenguaje, framework o tecnologia.',
+            url: 'https://github.com/sindresorhus/awesome',
+          },
+        ],
+      },
+      {
+        id: 'trends',
+        title: {
+          es: 'Tendencias del Sector',
+          en: 'Industry Trends',
+        },
+        resources: [
+          {
+            id: 'github-trending',
+            name: 'GitHub Trending',
+            description: 'Mantente al dia con lo que la comunidad esta construyendo ahora mismo.',
+            url: 'https://github.com/trending',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'certifications-cv',
+    slug: 'certifications-cv',
+    icon: '🏆',
+    sections: [
+      {
+        id: 'featured-certs',
+        title: {
+          es: '1. Certificaciones Destacadas (IA, Cloud y Git)',
+          en: '1. Featured Certifications (AI, Cloud & Git)',
+        },
+        resources: [
+          {
+            id: 'claude-certified',
+            name: 'Claude Certified Architect (Anthropic)',
+            description: 'Enfoque en arquitectura de IA. Algunos certificados tienen costo.',
+            url: 'https://anthropic.skilljar.com/claude-certified-architect-foundations-access-request',
+          },
+          {
+            id: 'google-ai-essentials',
+            name: 'Google AI Essentials',
+            description: 'Fundamentos practicos de IA generativa para el trabajo.',
+            url: 'https://grow.google/ai-essentials/',
+          },
+          {
+            id: 'github-foundations',
+            name: 'GitHub Foundations Certification',
+            description: 'Validacion oficial de conocimientos en Git y colaboracion.',
+            url: 'https://education.github.com/experiences/foundations_certificate',
+          },
+          {
+            id: 'aws-skill-builder',
+            name: 'AWS Skill Builder',
+            description: 'Cursos fundamentales de Amazon Web Services con insignias gratuitas.',
+            url: 'https://skillbuilder.aws',
+          },
+          {
+            id: 'microsoft-learn',
+            name: 'Microsoft Learn',
+            description: 'Rutas de aprendizaje para "Applied Skills" y certificaciones en Azure.',
+            url: 'https://learn.microsoft.com',
+          },
+        ],
+      },
+      {
+        id: 'corporate-learning',
+        title: {
+          es: '2. Ecosistemas de Aprendizaje Corporativo',
+          en: '2. Corporate Learning Ecosystems',
+        },
+        resources: [
+          {
+            id: 'ibm-skillsbuild',
+            name: 'IBM SkillsBuild',
+            description: 'Certificaciones en IA, Cloud, Ciberseguridad y Data Science con badges digitales.',
+            url: 'https://skillsbuild.org/',
+          },
+          {
+            id: 'google-skillshop',
+            name: 'Google Skillshop',
+            description: 'Formacion oficial en Analytics, Google Ads, Cloud e IA.',
+            url: 'https://skillshop.withgoogle.com/',
+          },
+          {
+            id: 'cisco-netacad',
+            name: 'Cisco Networking Academy',
+            description: 'Especializada en Redes, Ciberseguridad e IA con badges digitales gratuitos.',
+            url: 'https://www.netacad.com/',
+          },
+          {
+            id: 'ibm-cognitive',
+            name: 'IBM Cognitive Class',
+            description: 'Mas de 100 cursos tecnicos en IA, Big Data y Blockchain.',
+            url: 'https://cognitiveclass.ai/',
+          },
+        ],
+      },
+      {
+        id: 'code-data-platforms',
+        title: {
+          es: '3. Plataformas Especializadas en Codigo y Datos',
+          en: '3. Specialized Code & Data Platforms',
+        },
+        resources: [
+          {
+            id: 'freecodecamp-certs',
+            name: 'freeCodeCamp',
+            description: 'Certificaciones completas (300h+) en HTML/CSS, JavaScript, Python, Data Science y ML.',
+            url: 'https://www.freecodecamp.org/',
+          },
+          {
+            id: 'kaggle-learn',
+            name: 'Kaggle Learn',
+            description: 'Cursos practicos de Python, SQL y ML con certificados de finalizacion rapidos.',
+            url: 'https://www.kaggle.com/learn',
+          },
+          {
+            id: 'sololearn-certs',
+            name: 'Sololearn',
+            description: 'Certificados en multiples lenguajes de programacion (JS, Python, C++, etc.).',
+            url: 'https://www.sololearn.com/',
+          },
+          {
+            id: 'elements-of-ai',
+            name: 'Elements of AI',
+            description: 'Fundamentos de IA con certificado gratuito, avalado por la Universidad de Helsinki.',
+            url: 'https://www.elementsofai.com/',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
