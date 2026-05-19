@@ -286,6 +286,12 @@ export const guides: Guide[] = [
             url: 'https://www.codewars.com/',
           },
           {
+            id: 'logic-practice',
+            name: 'Logic-Practice.com',
+            description: 'Ejercicios de logica pura.',
+            url: 'https://logic-practice.com/',
+          },
+          {
             id: 'sqlbolt',
             name: 'SQLBolt',
             description: 'Aprende SQL de forma interactiva.',
@@ -786,6 +792,18 @@ export const guides: Guide[] = [
             url: 'https://www.hackerrank.com/',
           },
           {
+            id: 'leetcode-react',
+            name: 'LeetCode',
+            description: 'Desafios tecnicos de algoritmos.',
+            url: 'https://leetcode.com/',
+          },
+          {
+            id: 'codewars-react',
+            name: 'Codewars',
+            description: 'Entrena tu logica con retos de la comunidad.',
+            url: 'https://www.codewars.com/',
+          },
+          {
             id: 'exercism',
             name: 'Exercism',
             description: 'Ejercicios cortos e interactivos.',
@@ -844,6 +862,12 @@ export const guides: Guide[] = [
             url: 'https://imagekit.io/',
           },
           {
+            id: 'next-image',
+            name: 'next/image',
+            description: 'Optimizacion automatica si usas Next.js.',
+            url: 'https://nextjs.org/docs/basic-features/image-optimization',
+          },
+          {
             id: 'webdev-images',
             name: 'web.dev - Imagenes',
             description: 'Guia oficial de Google sobre formatos modernos.',
@@ -863,6 +887,12 @@ export const guides: Guide[] = [
             name: 'Webpack SplitChunks',
             description: 'Divide tu codigo automaticamente.',
             url: 'https://webpack.js.org/plugins/split-chunks-plugin/',
+          },
+          {
+            id: 'vite-lazy',
+            name: 'Vite Lazy Loading',
+            description: 'Soporte nativo para imports dinamicos.',
+            url: 'https://vitejs.dev/guide/features.html#dynamic-import',
           },
           {
             id: 'react-lazy',
@@ -885,6 +915,18 @@ export const guides: Guide[] = [
           en: '3. Reduce JavaScript',
         },
         resources: [
+          {
+            id: 'webpack-bundle-analyzer',
+            name: 'Webpack Bundle Analyzer',
+            description: 'Visualiza el peso de tus paquetes.',
+            url: 'https://www.npmjs.com/package/webpack-bundle-analyzer',
+          },
+          {
+            id: 'rollup-treeshaking',
+            name: 'Rollup / Vite Tree-shaking',
+            description: 'Elimina codigo innecesario automaticamente.',
+            url: 'https://rollupjs.org/guide/en/#tree-shaking',
+          },
           {
             id: 'bundlephobia',
             name: 'Bundlephobia',
@@ -957,6 +999,12 @@ export const guides: Guide[] = [
             description: 'CDN de alto rendimiento.',
             url: 'https://bunny.net/',
           },
+          {
+            id: 'fastly',
+            name: 'Fastly',
+            description: 'CDN de alto rendimiento para aplicaciones modernas.',
+            url: 'https://www.fastly.com/',
+          },
         ],
       },
       {
@@ -983,6 +1031,12 @@ export const guides: Guide[] = [
             name: 'critical (npm)',
             description: 'Extrae y separa el CSS "above-the-fold".',
             url: 'https://github.com/addyosmani/critical',
+          },
+          {
+            id: 'uncss',
+            name: 'UnCSS',
+            description: 'Detecta y limpia reglas CSS inutiles.',
+            url: 'https://github.com/uncss/uncss',
           },
         ],
       },
@@ -1037,6 +1091,12 @@ export const guides: Guide[] = [
             name: 'WebPageTest',
             description: 'Tests detallados de carga por paises.',
             url: 'https://www.webpagetest.org/',
+          },
+          {
+            id: 'webdev-measure',
+            name: 'web.dev/measure',
+            description: 'El hub de Google para Core Web Vitals.',
+            url: 'https://web.dev/measure',
           },
         ],
       },
@@ -1370,6 +1430,100 @@ export const guides: Guide[] = [
             name: 'Elements of AI',
             description: 'Fundamentos de IA con certificado gratuito, avalado por la Universidad de Helsinki.',
             url: 'https://www.elementsofai.com/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'api-real-world',
+    slug: 'api-real-world',
+    icon: '🔌',
+    sections: [
+      {
+        id: 'api-design-roadmap',
+        title: {
+          es: 'Ruta Completa: Diseno y Consumo de APIs',
+          en: 'Complete Roadmap: API Design & Consumption',
+        },
+        resources: [
+          {
+            id: 'roadmap-api-design',
+            name: 'Roadmap.sh - API Design',
+            description: 'Ruta completa para aprender diseno y consumo de APIs paso a paso.',
+            url: 'https://roadmap.sh/api-design',
+          },
+          {
+            id: 'public-apis-repo',
+            name: 'Public APIs (+1,400 APIs publicas)',
+            description: 'El repositorio mas famoso con mas de 1,400 APIs publicas para practicar e integrar.',
+            url: 'https://github.com/public-apis/public-apis',
+          },
+        ],
+      },
+      {
+        id: 'api-projects-practice',
+        title: {
+          es: 'Proyectos Paso a Paso con Feedback',
+          en: 'Step-by-Step Projects with Feedback',
+        },
+        resources: [
+          {
+            id: 'frontend-mentor-challenges',
+            name: 'Frontend Mentor Challenges',
+            description: 'Proyectos paso a paso con feedback de la comunidad para practicar consumo de APIs.',
+            url: 'https://www.frontendmentor.io/challenges',
+          },
+        ],
+      },
+      {
+        id: 'api-documentation',
+        title: {
+          es: 'Documentacion Interactiva de APIs',
+          en: 'Interactive API Documentation',
+        },
+        resources: [
+          {
+            id: 'swagger-ui',
+            name: 'Swagger UI',
+            description: 'Genera documentacion interactiva para tu API de forma profesional.',
+            url: 'https://swagger.io/tools/swagger-ui',
+          },
+        ],
+      },
+      {
+        id: 'api-clients-tools',
+        title: {
+          es: 'Clientes y Herramientas para APIs',
+          en: 'API Clients & Tools',
+        },
+        resources: [
+          {
+            id: 'hoppscotch',
+            name: 'Hoppscotch',
+            description: 'Cliente REST/GraphQL desde el navegador. Rapido, ligero y open source.',
+            url: 'https://hoppscotch.io',
+          },
+          {
+            id: 'jsonplaceholder',
+            name: 'JSONPlaceholder',
+            description: 'Fake REST API gratuita para practicar peticiones HTTP sin configurar backend.',
+            url: 'https://jsonplaceholder.typicode.com',
+          },
+        ],
+      },
+      {
+        id: 'api-deploy',
+        title: {
+          es: 'Deploy: Publica tu API',
+          en: 'Deploy: Publish Your API',
+        },
+        resources: [
+          {
+            id: 'railway-deploy',
+            name: 'Railway',
+            description: 'Publica tu API en minutos. Soporte para Node.js, Python, Go y mas.',
+            url: 'https://railway.com/',
           },
         ],
       },

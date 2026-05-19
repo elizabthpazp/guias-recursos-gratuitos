@@ -86,6 +86,22 @@ export const translations = {
         title: 'Optimizacion Web y Rendimiento',
         description: 'Guia completa para optimizar la experiencia del usuario y el SEO de tu sitio web.',
       },
+      'portfolio-resources': {
+        title: 'Recursos para tu Portafolio',
+        description: 'Plataformas, desafios y proyectos practicos para construir un portafolio profesional que destaque.',
+      },
+      'cv-portfolio-github': {
+        title: 'CV, Portafolio y GitHub',
+        description: 'Repositorios y recursos para planificar tu carrera, preparar entrevistas y construir proyectos reales.',
+      },
+      'certifications-cv': {
+        title: 'Certificaciones para tu CV',
+        description: 'Certificaciones gratuitas de empresas como Google, IBM, Microsoft y mas para potenciar tu perfil profesional.',
+      },
+      'api-real-world': {
+        title: 'Aprende a Trabajar con APIs como en un Trabajo Real',
+        description: 'Recursos gratuitos para dominar el diseno, consumo, documentacion y deploy de APIs profesionales.',
+      },
     },
   },
   en: {
@@ -172,6 +188,22 @@ export const translations = {
       'web-optimization': {
         title: 'Web Optimization & Performance',
         description: 'Complete guide to optimize user experience and SEO for your website.',
+      },
+      'portfolio-resources': {
+        title: 'Portfolio Resources',
+        description: 'Platforms, challenges and practical projects to build a professional portfolio that stands out.',
+      },
+      'cv-portfolio-github': {
+        title: 'CV, Portfolio & GitHub',
+        description: 'Repositories and resources to plan your career, prepare for interviews and build real projects.',
+      },
+      'certifications-cv': {
+        title: 'Certifications for Your CV',
+        description: 'Free certifications from companies like Google, IBM, Microsoft and more to boost your professional profile.',
+      },
+      'api-real-world': {
+        title: 'Learn to Work with APIs Like in a Real Job',
+        description: 'Free resources to master API design, consumption, documentation and deployment professionally.',
       },
     },
   },

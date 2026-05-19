@@ -16,6 +16,8 @@ export function GuideCard({ guide, index }: GuideCardProps) {
   const guideTranslation = t.guides[guide.slug as keyof typeof t.guides]
   const totalResources = getTotalResources(guide)
 
+  if (!guideTranslation) return null
+
   return (
     <Link
       href={`/guides/${guide.slug}`}
