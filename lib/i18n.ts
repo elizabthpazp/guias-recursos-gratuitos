@@ -5,25 +5,27 @@ export const translations = {
     // Navigation
     nav: {
       home: 'INICIO',
-      guides: 'GUIAS',
+      guides: 'Guías',
       favorites: 'FAVORITOS',
       language: 'Idioma',
     },
     // Home
     home: {
       versionTag: '[ guides_v1.0 // build_2026 ]',
-      title: 'Guias de recursos gratuitos para programadores',
-      description: 'Aprende, mejora y crece como dev. Curado con',
+      title: 'Guías de recursos gratuitos para programadores',
+      description: 'Aprende, mejora y crece como dev. Creado con',
+      descriptionEnd: 'para mi audiencia tech.',
       byLine: '// by elijs.dev',
-      exploreGuides: 'Explorar guias',
+      exploreGuides: 'Explorar Guías',
       favoritesCount: 'Favoritos',
-      guidesCount: 'Guias',
+      guidesCount: 'Guías',
       resourcesCount: 'Recursos',
+      freeLabel: 'Gratis',
       viewGuide: 'Ver guia',
       resources: 'recursos',
-      searchPlaceholder: 'Buscar guias...',
-      allGuides: 'GUIAS_DISPONIBLES',
-      noResults: 'No se encontraron guias',
+      searchPlaceholder: 'Buscar Guías...',
+      allGuides: 'GUÍAS_DISPONIBLES',
+      noResults: 'No se encontraron Guías',
       clearSearch: 'Limpiar busqueda',
     },
     // Guide pages
@@ -43,8 +45,8 @@ export const translations = {
     favorites: {
       title: 'MIS_FAVORITOS',
       empty: 'No tienes favoritos guardados',
-      emptyDesc: 'Explora las guias y agrega recursos a tus favoritos',
-      explore: 'Explorar guias',
+      emptyDesc: 'Explora las Guías y agrega recursos a tus favoritos',
+      explore: 'Explorar Guías',
     },
     // Footer
     footer: {
@@ -57,8 +59,8 @@ export const translations = {
       title: 'elijs@dev:~$',
       commands: [
         '$ cat recursos.txt',
-        '> Cargando guias de programacion...',
-        '> [OK] 5 guias encontradas',
+        '> Cargando Guías de programacion...',
+        '> [OK] 5 Guías encontradas',
         '> [OK] Recursos listos',
         '$ echo "Happy coding!"',
         '> Happy coding! 💜',
@@ -116,12 +118,14 @@ export const translations = {
     home: {
       versionTag: '[ guides_v1.0 // build_2026 ]',
       title: 'Free resource guides for programmers',
-      description: 'Learn, improve and grow as a dev. Curated with',
+      description: 'Learn, improve and grow as a dev. Created with',
+      descriptionEnd: 'for my tech audience.',
       byLine: '// by elijs.dev',
       exploreGuides: 'Explore guides',
       favoritesCount: 'Favorites',
       guidesCount: 'Guides',
       resourcesCount: 'Resources',
+      freeLabel: 'Free',
       viewGuide: 'View guide',
       resources: 'resources',
       searchPlaceholder: 'Search guides...',

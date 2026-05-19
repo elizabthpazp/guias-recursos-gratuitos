@@ -7,26 +7,28 @@ export function LanguageSwitch() {
   const { locale, setLocale } = useLocale()
 
   return (
-    <div className="flex items-center gap-0 rounded border border-border text-xs">
+    <div className="flex items-center overflow-hidden rounded border border-border font-mono text-[11px] tracking-widest">
       <button
         onClick={() => setLocale('es')}
+        aria-pressed={locale === 'es'}
         className={cn(
-          'px-2.5 py-1.5 transition-colors',
+          'px-2.5 py-1 transition-colors',
           locale === 'es'
-            ? 'bg-foreground text-background'
-            : 'text-muted-foreground hover:text-foreground'
+            ? 'bg-terminal-green text-black'
+            : 'text-muted-foreground hover:text-foreground',
         )}
       >
         ES
       </button>
-      <span className="text-muted-foreground">|</span>
+      <span className="text-border">|</span>
       <button
         onClick={() => setLocale('en')}
+        aria-pressed={locale === 'en'}
         className={cn(
-          'px-2.5 py-1.5 transition-colors',
+          'px-2.5 py-1 transition-colors',
           locale === 'en'
-            ? 'bg-foreground text-background'
-            : 'text-muted-foreground hover:text-foreground'
+            ? 'bg-terminal-green text-black'
+            : 'text-muted-foreground hover:text-foreground',
         )}
       >
         EN

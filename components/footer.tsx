@@ -28,18 +28,23 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {socials.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-muted-foreground transition-colors hover:text-terminal-green"
-              >
-                {social.name}
-              </a>
-            ))}
+          <div className="flex flex-col items-center gap-2">
+            <span className="font-mono text-xs uppercase tracking-widest text-terminal-green">
+              {locale === 'es' ? '// sígueme' : '// follow me'}
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground transition-colors hover:text-terminal-green"
+                >
+                  {social.name}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Donate Button */}

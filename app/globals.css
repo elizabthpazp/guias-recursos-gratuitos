@@ -143,7 +143,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image:
+      /* horizontal scanlines */
+      repeating-linear-gradient(
+        to bottom,
+        rgba(34, 197, 94, 0.025) 0px,
+        rgba(34, 197, 94, 0.025) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      /* very faint grid */
+      linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+    background-size: 100% 3px, 32px 32px, 32px 32px;
+    background-attachment: fixed;
   }
+}
+
+/* Hero radial vignette helper */
+.hero-vignette {
+  background-image: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
 
 /* Terminal cursor blink animation */

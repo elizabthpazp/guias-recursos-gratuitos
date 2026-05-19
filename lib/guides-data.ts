@@ -390,7 +390,7 @@ export const guides: Guide[] = [
           {
             id: 'digitalocean',
             name: 'DigitalOcean Tutorials',
-            description: 'Guias maestras de infraestructura.',
+            description: 'Guías maestras de infraestructura.',
             url: 'https://www.digitalocean.com/community/tutorials',
           },
           {
@@ -514,7 +514,7 @@ export const guides: Guide[] = [
           {
             id: 'rapidapi-learn-2',
             name: 'RapidAPI Learn',
-            description: 'Guias para aprender a conectar aplicaciones mediante APIs.',
+            description: 'Guías para aprender a conectar aplicaciones mediante APIs.',
             url: 'https://rapidapi.com/learn',
           },
         ],
@@ -1211,7 +1211,7 @@ export const guides: Guide[] = [
           {
             id: 'developer-roadmap',
             name: 'Developer Roadmap',
-            description: 'Guias interactivas y caminos detallados para entender que tecnologias aprender segun tu rol.',
+            description: 'Guías interactivas y caminos detallados para entender que tecnologias aprender segun tu rol.',
             url: 'https://github.com/nilbuild/developer-roadmap',
           },
         ],
@@ -1294,14 +1294,14 @@ export const guides: Guide[] = [
       {
         id: 'awesome-resources',
         title: {
-          es: 'Recursos Curados (The "Awesome" List)',
-          en: 'Curated Resources (The "Awesome" List)',
+          es: 'Recursos Creados (The "Awesome" List)',
+          en: 'Created Resources (The "Awesome" List)',
         },
         resources: [
           {
             id: 'awesome-list',
             name: 'Awesome Resources',
-            description: 'La famosa "lista de listas". Recursos curados de cualquier lenguaje, framework o tecnologia.',
+            description: 'La famosa "lista de listas". Recursos creados de cualquier lenguaje, framework o tecnologia.',
             url: 'https://github.com/sindresorhus/awesome',
           },
         ],

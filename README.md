@@ -4,7 +4,7 @@
 
 ### Guías de Recursos Gratuitos para Programadores
 
-Aprende, mejora y crece como dev. Recursos curados con amor para la comunidad tech.
+Aprende, mejora y crece como dev. Recursos creados con amor para la comunidad tech.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev/)
@@ -33,7 +33,7 @@ Una plataforma web open source que recopila **guías curadas de recursos gratuit
 ```bash
 guest@elijs.dev:~$ ls ./guides/
 > 9 guías_disponibles
-> 150+ recursos_curados
+> 150+ recursos_creados
 > // todo_es_gratis.exe
 ```
 

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Heart } from 'lucide-react'
 import { useState } from 'react'
 import { useLocale } from '@/lib/locale-context'
 import { LanguageSwitch } from './language-switch'
@@ -14,17 +14,18 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-background">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link 
-          href="/" 
-          className="flex items-center gap-1 text-base tracking-tight"
+        <Link
+          href="/"
+          className="flex items-center gap-1 font-mono text-base tracking-tight"
+          aria-label="elijs.dev home"
         >
-          <span className="text-terminal-green">{'>'}</span>
+          <span className="mr-1 text-terminal-green">{'>'}</span>
           <span className="font-semibold text-foreground">elijs</span>
-          <span className="font-semibold text-terminal-green">.dev</span>
-          <span className="ml-1 text-primary">{'💜'}</span>
+          <span className="font-semibold text-terminal-green">&nbsp;.dev</span>
+          <span className="ml-1 text-primary">💜</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -32,8 +33,10 @@ export function Navbar() {
           <Link
             href="/"
             className={cn(
-              'text-sm uppercase tracking-widest transition-colors',
-              pathname === '/' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
+              'font-mono text-xs uppercase tracking-[0.2em] transition-colors',
+              pathname === '/'
+                ? 'text-terminal-green'
+                : 'text-muted-foreground hover:text-foreground',
             )}
           >
             {t.nav.home}
@@ -41,10 +44,13 @@ export function Navbar() {
           <Link
             href="/favorites"
             className={cn(
-              'flex items-center gap-2 text-sm uppercase tracking-widest transition-colors',
-              pathname === '/favorites' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'
+              'flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.2em] transition-colors',
+              pathname === '/favorites'
+                ? 'text-primary'
+                : 'text-muted-foreground hover:text-foreground',
             )}
           >
+            <Heart className="h-3.5 w-3.5" />
             {t.nav.favorites}
           </Link>
 
@@ -69,8 +75,8 @@ export function Navbar() {
               href="/"
               onClick={() => setIsOpen(false)}
               className={cn(
-                'text-sm uppercase tracking-widest transition-colors',
-                pathname === '/' ? 'text-foreground' : 'text-muted-foreground'
+                'font-mono text-xs uppercase tracking-[0.2em] transition-colors',
+                pathname === '/' ? 'text-terminal-green' : 'text-muted-foreground',
               )}
             >
               {t.nav.home}
@@ -79,10 +85,11 @@ export function Navbar() {
               href="/favorites"
               onClick={() => setIsOpen(false)}
               className={cn(
-                'flex items-center gap-2 text-sm uppercase tracking-widest transition-colors',
-                pathname === '/favorites' ? 'text-foreground' : 'text-muted-foreground'
+                'flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.2em] transition-colors',
+                pathname === '/favorites' ? 'text-primary' : 'text-muted-foreground',
               )}
             >
+              <Heart className="h-3.5 w-3.5" />
               {t.nav.favorites}
             </Link>
 
