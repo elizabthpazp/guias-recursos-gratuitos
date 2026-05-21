@@ -34,9 +34,9 @@ export function HomeContent() {
   )
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen overflow-x-hidden bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-border/30">
+      <section className="relative min-w-0 overflow-hidden border-b border-border/30">
         {/* subtle radial vignette over the scanlines */}
         <div className="hero-vignette pointer-events-none absolute inset-0" aria-hidden />
 
