@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Providers } from './providers'
+import { FloatingPizza } from '@/components/floating-pizza'
 
 const geist = Geist({
   subsets: ['latin'],
@@ -167,7 +168,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${geist.variable} ${geistMono.variable} bg-background`}>
       <body className="font-sans antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <FloatingPizza />
+        </Providers>
         <script
           type="application/ld+json"
           // Structured data improves how search engines display the site

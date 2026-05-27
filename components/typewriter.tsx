@@ -14,12 +14,15 @@ export function Typewriter({ text, speed = 50, delay = 300, className }: Typewri
   const [displayedText, setDisplayedText] = useState('')
   const [started, setStarted] = useState(false)
 
+  // Reset when text changes (e.g. locale switch)
   useEffect(() => {
+    setDisplayedText('')
+    setStarted(false)
     const startTimeout = setTimeout(() => {
       setStarted(true)
     }, delay)
     return () => clearTimeout(startTimeout)
-  }, [delay])
+  }, [text, delay])
 
   useEffect(() => {
     if (!started) return

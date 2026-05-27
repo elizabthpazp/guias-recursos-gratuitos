@@ -35,6 +35,11 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     if (isLoaded) {
       document.title = PAGE_TITLES[locale]
       document.documentElement.lang = locale
+      // Also update the <title> tag in <head> to prevent Next.js metadata from overriding
+      const titleElement = document.querySelector('head title')
+      if (titleElement) {
+        titleElement.textContent = PAGE_TITLES[locale]
+      }
     }
   }, [locale, isLoaded])
 
