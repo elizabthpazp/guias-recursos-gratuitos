@@ -13,6 +13,11 @@ const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
 const LOCALE_KEY = 'elijs-dev-locale'
 
+const PAGE_TITLES: Record<Locale, string> = {
+  es: 'elijs.dev | Guías y Recursos Gratuitos para Programadores',
+  en: 'elijs.dev | Free Guides & Resources for Programmers',
+}
+
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('es')
   const [isLoaded, setIsLoaded] = useState(false)
@@ -24,6 +29,14 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     }
     setIsLoaded(true)
   }, [])
+
+  // Update document title and lang attribute when locale changes
+  useEffect(() => {
+    if (isLoaded) {
+      document.title = PAGE_TITLES[locale]
+      document.documentElement.lang = locale
+    }
+  }, [locale, isLoaded])
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)
