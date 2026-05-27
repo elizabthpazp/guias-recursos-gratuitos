@@ -104,6 +104,10 @@ export const translations = {
         title: 'Aprende a Trabajar con APIs como en un Trabajo Real',
         description: 'Recursos gratuitos para dominar el diseno, consumo, documentacion y deploy de APIs profesionales.',
       },
+      'logic-practice-30-days': {
+        title: 'Mejora tu Logica de Programacion en 30 Dias',
+        description: 'Puzzles, logica visual, problemas interactivos y ejercicios de algoritmos con estos recursos gratuitos.',
+      },
     },
   },
   en: {
@@ -208,6 +212,10 @@ export const translations = {
       'api-real-world': {
         title: 'Learn to Work with APIs Like in a Real Job',
         description: 'Free resources to master API design, consumption, documentation and deployment professionally.',
+      },
+      'logic-practice-30-days': {
+        title: 'Improve Your Programming Logic in 30 Days',
+        description: 'Puzzles, visual logic, interactive problems and algorithm exercises with these free resources.',
       },
     },
   },

@@ -1529,6 +1529,85 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    id: 'logic-practice-30-days',
+    slug: 'logic-practice-30-days',
+    icon: '🧠',
+    sections: [
+      {
+        id: 'algorithms-data-structures',
+        title: {
+          es: 'Problemas de Algoritmos y Estructuras de Datos',
+          en: 'Algorithm & Data Structure Problems',
+        },
+        resources: [
+          {
+            id: 'leetcode-logic',
+            name: 'LeetCode',
+            description: 'Retos diarios por niveles.',
+            url: 'https://leetcode.com/',
+          },
+          {
+            id: 'codewars-logic',
+            name: 'Codewars',
+            description: 'Logica visual y pensamiento algoritmico.',
+            url: 'https://www.codewars.com/',
+          },
+          {
+            id: 'codingame-logic',
+            name: 'CodinGame',
+            description: 'Ejercicios con feedback de mentores.',
+            url: 'https://www.codingame.com/',
+          },
+          {
+            id: 'exercism-logic',
+            name: 'Exercism',
+            description: 'Ejercicios con feedback de mentores.',
+            url: 'https://exercism.org/',
+          },
+        ],
+      },
+      {
+        id: 'visual-logic-reasoning',
+        title: {
+          es: 'Logica Visual y Razonamiento',
+          en: 'Visual Logic & Reasoning',
+        },
+        resources: [
+          {
+            id: 'excalidraw-logic',
+            name: 'Excalidraw',
+            description: 'Entiende los procesos dibujando.',
+            url: 'https://excalidraw.com/',
+          },
+          {
+            id: 'project-euler-logic',
+            name: 'Project Euler',
+            description: 'Entrena razonamiento y creatividad.',
+            url: 'https://projecteuler.net/',
+          },
+          {
+            id: 'hackerrank-logic',
+            name: 'HackerRank',
+            description: 'Retos por dominio.',
+            url: 'https://www.hackerrank.com/',
+          },
+          {
+            id: 'logic-practice-site',
+            name: 'Logic-Practice.com',
+            description: 'Visualiza ejecucion paso a paso.',
+            url: 'https://logic-practice.com/',
+          },
+          {
+            id: 'brilliant-logic',
+            name: 'Brilliant.org',
+            description: 'Piensa como programador desde adentro.',
+            url: 'https://brilliant.org/',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
