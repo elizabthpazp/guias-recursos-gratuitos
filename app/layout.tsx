@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Providers } from './providers'
-import { FloatingPizza } from '@/components/floating-pizza'
+// import { FloatingPizza } from '@/components/floating-pizza'
 
 const geist = Geist({
   subsets: ['latin'],
@@ -170,7 +170,8 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Providers>
           {children}
-          <FloatingPizza />
+          {/* FloatingPizza oculto temporalmente */}
+          {/* <FloatingPizza /> */}
         </Providers>
         <script
           type="application/ld+json"
