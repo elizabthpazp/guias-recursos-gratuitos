@@ -2,7 +2,7 @@ export interface Resource {
   id: string
   name: string
   description: string
-  url: string
+  url?: string
   category?: string
 }
 
@@ -1603,6 +1603,62 @@ export const guides: Guide[] = [
             name: 'Brilliant.org',
             description: 'Piensa como programador desde adentro.',
             url: 'https://brilliant.org/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'aprender-como-senior',
+    slug: 'aprender-como-senior',
+    icon: '🚀',
+    sections: [
+      {
+        id: 'cambio-de-mentalidad',
+        title: {
+          es: 'El cambio de mentalidad que me llevó 3 años, tú lo puedes hacer en 30 días',
+          en: 'The mindset change that took me 3 years, you can do it in 30 days',
+        },
+        resources: [
+          {
+            id: 'consejo-1',
+            name: 'Deja de hacer tutoriales',
+            description: 'Empieza a construir cosas que nadie te pidió.',
+          },
+          {
+            id: 'consejo-2',
+            name: 'Rompe lo que construyes',
+            description: 'Si no sabes cómo falla, no sabes cómo funciona.',
+          },
+          {
+            id: 'consejo-3',
+            name: 'Busca problemas reales',
+            description: 'No busques cursos. Busca problemas reales que resolver.',
+          },
+          {
+            id: 'consejo-4',
+            name: 'Entiende por qué escalan y se rompen',
+            description: 'La diferencia no es saber más lenguajes sino saber por qué las cosas escalan y por qué se rompen.',
+          },
+          {
+            id: 'consejo-5',
+            name: 'No saber y aprender es parte del trabajo',
+            description: 'Entiende que NO SABER y aprender es parte del trabajo.',
+          },
+          {
+            id: 'consejo-6',
+            name: 'Diseña antes de codear',
+            description: 'Diseña, planifica, crea diagramas de procesos antes de codear. SIEMPRE.',
+          },
+          {
+            id: 'consejo-7',
+            name: 'Documenta mientras codeas',
+            description: 'Documenta mientras codeas, no después. Después no lo haces.',
+          },
+          {
+            id: 'consejo-8',
+            name: 'Resuelve lo simple primero',
+            description: 'Resuelve el problema más simple primero. Luego escala.',
           },
         ],
       },

@@ -1,6 +1,6 @@
 'use client'
 
-import { Heart } from 'lucide-react'
+import { Coffee, Heart } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
 
 const socials = [
@@ -47,8 +47,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Donate Button - oculto temporalmente */}
-          {/* <a
+          {/* Donate Button */}
+          <a
             href="https://buymeacoffee.com/elizabethph"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export function Footer() {
           >
             <Coffee className="h-4 w-4" />
             {t.footer.support}
-          </a> */}
+          </a>
 
           {/* Made with love */}
           <p className="flex items-center gap-1.5 text-sm text-muted-foreground">

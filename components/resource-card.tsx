@@ -23,6 +23,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   const favorite = isFavorite(resource.id)
 
   const handleCopyLink = async () => {
+    if (!resource.url) return
     await navigator.clipboard.writeText(resource.url)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -41,6 +42,7 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   }
 
   const shareOnX = () => {
+    if (!resource.url) return
     const text = `Check out ${resource.name}: ${resource.description}`
     const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(resource.url)}`
     window.open(url, '_blank')
@@ -129,15 +131,17 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
       </p>
 
       {/* Link */}
-      <a
-        href={resource.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1 text-xs text-terminal-green transition-colors hover:underline"
-      >
-        <ExternalLink className="h-3 w-3" />
-        {locale === 'es' ? 'Visitar' : 'Visit'}
-      </a>
+      {resource.url && (
+        <a
+          href={resource.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-xs text-terminal-green transition-colors hover:underline"
+        >
+          <ExternalLink className="h-3 w-3" />
+          {locale === 'es' ? 'Visitar' : 'Visit'}
+        </a>
+      )}
     </motion.div>
   )
 }

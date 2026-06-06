@@ -6,7 +6,7 @@ export interface FavoriteResource {
   id: string
   name: string
   description: string
-  url: string
+  url?: string
   guideId: string
   guideTitle: string
   addedAt: number

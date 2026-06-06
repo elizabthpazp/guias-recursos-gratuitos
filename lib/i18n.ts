@@ -108,6 +108,10 @@ export const translations = {
         title: 'Mejora tu Logica de Programacion en 30 Dias',
         description: 'Puzzles, logica visual, problemas interactivos y ejercicios de algoritmos con estos recursos gratuitos.',
       },
+      'aprender-como-senior': {
+        title: 'Aprende a Programar como Senior',
+        description: 'El cambio de mentalidad que me llevo 3 anos, tu lo puedes hacer en 30 dias.',
+      },
     },
   },
   en: {
@@ -216,6 +220,10 @@ export const translations = {
       'logic-practice-30-days': {
         title: 'Improve Your Programming Logic in 30 Days',
         description: 'Puzzles, visual logic, interactive problems and algorithm exercises with these free resources.',
+      },
+      'aprender-como-senior': {
+        title: 'Learn to Program like a Senior',
+        description: 'The mindset change that took me 3 years, you can do it in 30 days.',
       },
     },
   },
