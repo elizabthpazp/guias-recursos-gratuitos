@@ -1664,6 +1664,73 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    id: 'tech-interview-prep',
+    slug: 'tech-interview-prep',
+    icon: '🎯',
+    sections: [
+      {
+        id: 'live-coding-algorithms',
+        title: {
+          es: 'Ejercicios tipo Live Coding y Algoritmos',
+          en: 'Live Coding & Algorithm Exercises',
+        },
+        resources: [
+          {
+            id: 'leetcode-interview',
+            name: 'LeetCode',
+            description: 'Comunidad más grande y estándar para preparar entrevistas técnicas.',
+            url: 'https://leetcode.com/',
+          },
+          {
+            id: 'pramp-interview',
+            name: 'Pramp',
+            description: 'Conecta con compañeros de práctica y entrena entrevistas juntos, con preguntas reales.',
+            url: 'https://pramp.com/',
+          },
+          {
+            id: 'interviewing-io',
+            name: 'Interviewing.io',
+            description: 'Te entrevistan ingenieros Senior o managers que toman decisiones de contratación. Incluye entrevistador de IA con feedback.',
+            url: 'https://interviewing.io/',
+          },
+          {
+            id: 'tech-interview-handbook',
+            name: 'Tech Interview Handbook',
+            description: 'Guía completa con patrones de algoritmos y estructuras de datos para que no te sorprenda ninguna pregunta.',
+            url: 'https://techinterviewhandbook.org/',
+          },
+          {
+            id: 'educative-mock',
+            name: 'Educative Mock Interviews',
+            description: 'IA que simula entrevistas reales de coding y system design.',
+            url: 'https://educative.io/mock-interview',
+          },
+        ],
+      },
+      {
+        id: 'cv-resume-review',
+        title: {
+          es: 'CV y Optimización para ATS',
+          en: 'CV & ATS Optimization',
+        },
+        resources: [
+          {
+            id: 'teal-hq',
+            name: 'Teal HQ (CV Tech Review)',
+            description: 'Analiza tu CV y te dice qué cambiar para pasar filtros de reclutadores.',
+            url: 'https://tealhq.com/',
+          },
+          {
+            id: 'resume-worded',
+            name: 'Resume Worded',
+            description: 'Escanea tu CV como un ATS real y te da feedback instantáneo.',
+            url: 'https://resumeworded.com/',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {

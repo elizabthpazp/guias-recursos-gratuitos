@@ -112,6 +112,10 @@ export const translations = {
         title: 'Aprende a Programar como Senior',
         description: 'El cambio de mentalidad que me llevo 3 anos, tu lo puedes hacer en 30 dias.',
       },
+      'tech-interview-prep': {
+        title: 'Entrevistas Técnicas como en Google',
+        description: 'Entrena como si Google te fuera a llamar mañana. Recursos para practicar entrevistas técnicas con feedback real.',
+      },
     },
   },
   en: {
@@ -224,6 +228,10 @@ export const translations = {
       'aprender-como-senior': {
         title: 'Learn to Program like a Senior',
         description: 'The mindset change that took me 3 years, you can do it in 30 days.',
+      },
+      'tech-interview-prep': {
+        title: 'Technical Interviews Like at Google',
+        description: 'Train as if Google would call you tomorrow. Resources for practicing technical interviews with real feedback.',
       },
     },
   },

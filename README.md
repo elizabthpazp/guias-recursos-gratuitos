@@ -32,7 +32,7 @@ Una plataforma web open source que recopila **guías curadas de recursos gratuit
 
 ```bash
 guest@elijs.dev:~$ ls ./guides/
-> 9 guías_disponibles
+> 12 guías_disponibles
 > 150+ recursos_creados
 > // todo_es_gratis.exe
 ```
@@ -52,6 +52,9 @@ guest@elijs.dev:~$ ls ./guides/
 | 📄 | **CV, Portafolio y GitHub** | Planificar tu carrera y preparar entrevistas |
 | 🏅 | **Certificaciones para tu CV** | Certificaciones gratuitas de Google, IBM, Microsoft |
 | 🔌 | **Trabajar con APIs** | Diseño, consumo y deploy de APIs profesionales |
+| 🎯 | **Entrevistas Técnicas como en Google** | Recursos para entrenar entrevistas técnicas con feedback real |
+| 🧠 | **Lógica y Práctica (30 días)** | Ejercicios para mejorar tu pensamiento algorítmico |
+| 🚀 | **Aprender como Senior** | Consejos para crecer como desarrollador senior |
 
 ---
 
