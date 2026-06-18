@@ -116,6 +116,10 @@ export const translations = {
         title: 'Entrevistas Técnicas como en Google',
         description: 'Entrena como si Google te fuera a llamar mañana. Recursos para practicar entrevistas técnicas con feedback real.',
       },
+      'think-like-programmer': {
+        title: 'Aprende a pensar como Programador',
+        description: 'En 30 días puedes cambiar cómo piensas. Con estos tips puedes mejorar tu mentalidad de desarrollo.',
+      },
     },
   },
   en: {
@@ -232,6 +236,10 @@ export const translations = {
       'tech-interview-prep': {
         title: 'Technical Interviews Like at Google',
         description: 'Train as if Google would call you tomorrow. Resources for practicing technical interviews with real feedback.',
+      },
+      'think-like-programmer': {
+        title: 'Learn to think like a Programmer',
+        description: 'In 30 days you can change how you think. With these tips you can improve your developer mindset.',
       },
     },
   },

@@ -55,6 +55,7 @@ guest@elijs.dev:~$ ls ./guides/
 | 🎯 | **Entrevistas Técnicas como en Google** | Recursos para entrenar entrevistas técnicas con feedback real |
 | 🧠 | **Lógica y Práctica (30 días)** | Ejercicios para mejorar tu pensamiento algorítmico |
 | 🚀 | **Aprender como Senior** | Consejos para crecer como desarrollador senior |
+| 🧠 | **Pensar como Programador** | Cambia cómo piensas en 30 días con estos tips |
 
 ---
 

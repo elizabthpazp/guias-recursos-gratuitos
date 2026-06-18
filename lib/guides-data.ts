@@ -1731,6 +1731,57 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    id: 'think-like-programmer',
+    slug: 'think-like-programmer',
+    icon: '🧠',
+    sections: [
+      {
+        id: 'mentalidad-programador',
+        title: {
+          es: 'En 30 días puedes cambiar cómo piensas',
+          en: 'In 30 days you can change how you think',
+        },
+        resources: [
+          {
+            id: 'tip-ia-pensar',
+            name: 'Usa IA para pensar más rápido, NO para pensar menos',
+            description: 'La IA es una herramienta para acelerar tu pensamiento, no para reemplazarlo.',
+          },
+          {
+            id: 'tip-errores',
+            name: 'Maneja errores como si TODO pudiera fallar',
+            description: 'Asume que cualquier integración, API o librería puede fallar en cualquier momento.',
+          },
+          {
+            id: 'tip-security',
+            name: 'Nunca olvides temas de seguridad. NUNCA',
+            description: 'La seguridad no es opcional ni algo que se agrega al final.',
+          },
+          {
+            id: 'tip-bug',
+            name: 'No arregles el bug. Pregúntate por qué existe ese BUG',
+            description: 'Arreglar el síntoma no resuelve el problema. Entiende la causa raíz.',
+          },
+          {
+            id: 'tip-disenar',
+            name: 'Antes de codear, escríbelo o dibujalo',
+            description: 'No basta con que funcione. Debe ser escalable y mantenible.',
+          },
+          {
+            id: 'tip-casos',
+            name: 'Piensa en todos los casos posibles antes que el usuario los encuentre por ti',
+            description: 'El código que solo funciona para el caso feliz está roto.',
+          },
+          {
+            id: 'tip-simple',
+            name: 'La solución más simple que funciona PRIMERO. Las mejoras vienen DESPUÉS',
+            description: 'No optimices prematuramente. Hazlo funcionar, luego hazlo mejor.',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
