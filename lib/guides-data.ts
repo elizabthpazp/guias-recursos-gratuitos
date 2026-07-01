@@ -1731,58 +1731,179 @@ export const guides: Guide[] = [
       },
     ],
   },
-  {
-    id: 'think-like-programmer',
-    slug: 'think-like-programmer',
-    icon: '🧠',
-    sections: [
       {
-        id: 'mentalidad-programador',
-        title: {
-          es: 'En 30 días puedes cambiar cómo piensas',
-          en: 'In 30 days you can change how you think',
-        },
-        resources: [
+        id: 'think-like-programmer',
+        slug: 'think-like-programmer',
+        icon: '🧠',
+        sections: [
           {
-            id: 'tip-ia-pensar',
-            name: 'Usa IA para pensar más rápido, NO para pensar menos',
-            description: 'La IA es una herramienta para acelerar tu pensamiento, no para reemplazarlo.',
-          },
-          {
-            id: 'tip-errores',
-            name: 'Maneja errores como si TODO pudiera fallar',
-            description: 'Asume que cualquier integración, API o librería puede fallar en cualquier momento.',
-          },
-          {
-            id: 'tip-security',
-            name: 'Nunca olvides temas de seguridad. NUNCA',
-            description: 'La seguridad no es opcional ni algo que se agrega al final.',
-          },
-          {
-            id: 'tip-bug',
-            name: 'No arregles el bug. Pregúntate por qué existe ese BUG',
-            description: 'Arreglar el síntoma no resuelve el problema. Entiende la causa raíz.',
-          },
-          {
-            id: 'tip-disenar',
-            name: 'Antes de codear, escríbelo o dibujalo',
-            description: 'No basta con que funcione. Debe ser escalable y mantenible.',
-          },
-          {
-            id: 'tip-casos',
-            name: 'Piensa en todos los casos posibles antes que el usuario los encuentre por ti',
-            description: 'El código que solo funciona para el caso feliz está roto.',
-          },
-          {
-            id: 'tip-simple',
-            name: 'La solución más simple que funciona PRIMERO. Las mejoras vienen DESPUÉS',
-            description: 'No optimices prematuramente. Hazlo funcionar, luego hazlo mejor.',
+            id: 'mentalidad-programador',
+            title: {
+              es: 'En 30 días puedes cambiar cómo piensas',
+              en: 'In 30 days you can change how you think',
+            },
+            resources: [
+              {
+                id: 'tip-ia-pensar',
+                name: 'Usa IA para pensar más rápido, NO para pensar menos',
+                description: 'La IA es una herramienta para acelerar tu pensamiento, no para reemplazarlo.',
+              },
+              {
+                id: 'tip-errores',
+                name: 'Maneja errores como si TODO pudiera fallar',
+                description: 'Asume que cualquier integración, API o librería puede fallar en cualquier momento.',
+              },
+              {
+                id: 'tip-security',
+                name: 'Nunca olvides temas de seguridad. NUNCA',
+                description: 'La seguridad no es opcional ni algo que se agrega al final.',
+              },
+              {
+                id: 'tip-bug',
+                name: 'No arregles el bug. Pregúntate por qué existe ese BUG',
+                description: 'Arreglar el síntoma no resuelve el problema. Entiende la causa raíz.',
+              },
+              {
+                id: 'tip-disenar',
+                name: 'Antes de codear, escríbelo o dibujalo',
+                description: 'No basta con que funcione. Debe ser escalable y mantenible.',
+              },
+              {
+                id: 'tip-casos',
+                name: 'Piensa en todos los casos posibles antes que el usuario los encuentre por ti',
+                description: 'El código que solo funciona para el caso feliz está roto.',
+              },
+              {
+                id: 'tip-simple',
+                name: 'La solución más simple que funciona PRIMERO. Las mejoras vienen DESPUÉS',
+                description: 'No optimices prematuramente. Hazlo funcionar, luego hazlo mejor.',
+              },
+            ],
           },
         ],
       },
-    ],
-  },
-]
+      {
+        id: 'bored-of-programming',
+        slug: 'bored-of-programming',
+        icon: '😴',
+        sections: [
+          {
+            id: 'bored-solutions',
+            title: {
+              es: 'Lo que sientes es señal de que necesitas un reto nuevo',
+              en: 'What you feel is a sign that you need a new challenge',
+            },
+            resources: [
+              {
+                id: 'bored-tip-1',
+                name: 'Haz un proyecto que no te hayan pedido',
+                description: 'Construye algo por iniciativa propia, no por obligación.',
+              },
+              {
+                id: 'bored-tip-2',
+                name: 'Abre un repo de algo que uses y lee el código. Sin IA',
+                description: 'Explora código real de proyectos que ya existen.',
+              },
+              {
+                id: 'bored-tip-3',
+                name: 'Construye algo muy pequeño que no dé miedo empezar',
+                description: 'Pequeño no significa inútil. Empezar es la parte más difícil.',
+              },
+              {
+                id: 'bored-tip-4',
+                name: 'Rompe algo y arréglalo tú',
+                description: 'Enseña a tu codebase a fallar y luego repara el desastre.',
+              },
+              {
+                id: 'bored-tip-5',
+                name: 'Clona una app que ya existe',
+                description: 'No tiene que ser perfecto. Solo tiene que ser tuyo.',
+              },
+              {
+                id: 'bored-tip-6',
+                name: 'Deja de seguir tutoriales',
+                description: 'Los tutoriales dan la ilusión de progreso. Construir da experiencia.',
+              },
+              {
+                id: 'bored-tip-7',
+                name: 'Contribuye a open source',
+                description: 'Escribe código que otros van a usar y revisar.',
+              },
+              {
+                id: 'bored-tip-8',
+                name: 'Enseña lo que ya sabes',
+                description: 'Eso obliga a entender de verdad lo que crees saber.',
+              },
+              {
+                id: 'bored-tip-9',
+                name: 'Cambia de área: si solo haces frontend, toca backend',
+                description: 'El cambio de contexto renueva el interés.',
+              },
+              {
+                id: 'bored-tip-10',
+                name: 'Resuelve una cosa diferente cada día',
+                description: 'No tienes que resolverlo todo. Solo una cosa.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'engineer-tools-improvement',
+        slug: 'engineer-tools-improvement',
+        icon: '🛠️',
+        sections: [
+          {
+            id: 'system-design-tools',
+            title: {
+              es: 'System Design y Arquitectura',
+              en: 'System Design & Architecture',
+            },
+            resources: [
+              {
+                id: 'system-design-handbook',
+                name: 'System Design Handbook',
+                description: 'Aprende a diseñar sistemas escalables como los de Netflix o Uber.',
+                url: 'https://systemdesignhandbook.com/',
+              },
+              {
+                id: 'refactoring-guru',
+                name: 'Refactoring.Guru',
+                description: 'Todo lo que necesitas saber sobre refactoring, design patterns y principios SOLID.',
+                url: 'https://refactoring.guru/',
+              },
+              {
+                id: 'bytebytego',
+                name: 'ByteByteGo (YouTube + Newsletter)',
+                description: 'Canal dedicado a system design a gran escala.',
+                url: 'https://www.youtube.com/@ByteByteGo',
+              },
+              {
+                id: 'roadmap-sh-tools',
+                name: 'roadmap.sh',
+                description: 'Tiene rutas específicas que muestran exactamente qué aprender para subir de nivel.',
+                url: 'https://roadmap.sh/',
+              },
+            ],
+          },
+          {
+            id: 'security-modern',
+            title: {
+              es: 'Seguridad (moderno y muy diferente)',
+              en: 'Security (modern and very different)',
+            },
+            resources: [
+              {
+                id: 'hacksplaining',
+                name: 'Hacksplaining',
+                description: 'Lecciones interactivas sobre vulnerabilidades de IA para defenderte.',
+                url: 'https://www.hacksplaining.com/',
+              },
+            ],
+          },
+        ],
+      },
+    ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug)

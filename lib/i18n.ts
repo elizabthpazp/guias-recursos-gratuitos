@@ -120,6 +120,14 @@ export const translations = {
         title: 'Aprende a pensar como Programador',
         description: 'En 30 días puedes cambiar cómo piensas. Con estos tips puedes mejorar tu mentalidad de desarrollo.',
       },
+      'engineer-tools-improvement': {
+        title: 'Lo que usan los ingenieros para mejorar en programación',
+        description: 'Mejora tus skills de programación …. y tu lógica. Con estos recursos gratuitos. Herramientas para simular entrevistas, system design básico, y CV tech review.',
+      },
+      'bored-of-programming': {
+        title: 'Para que no te aburra programar',
+        description: 'No avanzo :( Pero es porque llevas meses haciendo lo mismo. No es que no se te dé bien. Es que llevas meses haciendo lo mismo.',
+      },
     },
   },
   en: {
@@ -240,6 +248,14 @@ export const translations = {
       'think-like-programmer': {
         title: 'Learn to think like a Programmer',
         description: 'In 30 days you can change how you think. With these tips you can improve your developer mindset.',
+      },
+      'engineer-tools-improvement': {
+        title: 'What engineers use to improve their programming',
+        description: 'Improve your programming skills... and your logic. With these free resources. Tools to simulate interviews, basic system design, and CV tech review.',
+      },
+      'bored-of-programming': {
+        title: 'So you don\'t get bored with programming',
+        description: 'I\'m not making progress :( But it\'s because you\'ve been doing the same thing for months. It\'s not that you\'re not good at it. It\'s that you\'ve been doing the same thing for months.',
       },
     },
   },
