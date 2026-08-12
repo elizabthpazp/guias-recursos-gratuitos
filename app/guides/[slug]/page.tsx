@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getGuideBySlug, getAllGuides, getTotalResources } from '@/lib/guides-data'
+import { getGuideBySlug, getAllGuides, getTotalResources, toPublicGuide } from '@/lib/guides-data'
 import { GuideContent } from '@/components/guide-content'
 import { translations } from '@/lib/i18n'
 
@@ -123,7 +123,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         position: sIdx * 100 + rIdx + 1,
         name: resource.name,
         description: resource.description,
-        url: resource.url,
+        url: `${url}#${resource.id}`,
       })),
     ),
   }
@@ -161,7 +161,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <GuideContent guide={guide} />
+      <GuideContent guide={toPublicGuide(guide)} />
     </>
   )
 }

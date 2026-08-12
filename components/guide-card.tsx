@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
-import { type Guide, getTotalResources } from '@/lib/guides-data'
+import { type PublicGuideSummary } from '@/lib/guides-public'
 import { cn } from '@/lib/utils'
 
 const guideKeywords: Record<string, { es: string; en: string }> = {
@@ -20,14 +20,14 @@ const guideKeywords: Record<string, { es: string; en: string }> = {
 }
 
 interface GuideCardProps {
-  guide: Guide
+  guide: PublicGuideSummary
   index: number
 }
 
 export function GuideCard({ guide, index }: GuideCardProps) {
   const { locale, t } = useLocale()
   const guideTranslation = t.guides[guide.slug as keyof typeof t.guides]
-  const totalResources = getTotalResources(guide)
+  const totalResources = guide.resourceCount
   const keyword = guideKeywords[guide.slug]?.[locale] || ''
 
   if (!guideTranslation) return null

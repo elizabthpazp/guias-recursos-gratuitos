@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "obfuscate": "node scripts/encode-urls.mjs",
+    "dev": "npm run obfuscate && next dev",
+    "build": "npm run obfuscate && next build",
     "start": "next start",
     "lint": "eslint ."
   },

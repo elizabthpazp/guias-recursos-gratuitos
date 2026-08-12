@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { useLocale } from '@/lib/locale-context'
-import { getAllGuides, getTotalResources } from '@/lib/guides-data'
 
 type Line =
   | { type: 'prompt'; cmd: string }
@@ -11,10 +10,8 @@ type Line =
   | { type: 'comment'; text: string }
   | { type: 'quote'; text: string }
 
-export function TerminalWindow() {
+export function TerminalWindow({ guideCount, totalResources }: { guideCount: number; totalResources: number }) {
   const { locale } = useLocale()
-  const guides = getAllGuides()
-  const totalResources = guides.reduce((acc, guide) => acc + getTotalResources(guide), 0)
   const [time, setTime] = useState('')
 
   useEffect(() => {
@@ -33,7 +30,7 @@ export function TerminalWindow() {
         { type: 'out', text: '> dev_content_creator' },
         { type: 'comment', text: '> // programming + tech' },
         { type: 'prompt', cmd: 'ls ./guides/' },
-        { type: 'out', text: `> ${guides.length} guias_disponibles` },
+        { type: 'out', text: `> ${guideCount} guias_disponibles` },
         { type: 'out', text: `> ${totalResources} recursos_creados` },
         { type: 'prompt', cmd: 'cat ./mission.txt' },
         { type: 'quote', text: '> "compartir recursos gratis"' },
@@ -47,7 +44,7 @@ export function TerminalWindow() {
         { type: 'out', text: '> dev_content_creator' },
         { type: 'comment', text: '> // programming + tech' },
         { type: 'prompt', cmd: 'ls ./guides/' },
-        { type: 'out', text: `> ${guides.length} guides_available` },
+        { type: 'out', text: `> ${guideCount} guides_available` },
         { type: 'out', text: `> ${totalResources} created_resources` },
         { type: 'prompt', cmd: 'cat ./mission.txt' },
         { type: 'quote', text: '> "share free resources"' },

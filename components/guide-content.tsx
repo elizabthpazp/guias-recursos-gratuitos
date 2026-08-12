@@ -4,13 +4,13 @@ import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, Share2, Copy, Check } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
-import { type Guide, getTotalResources } from '@/lib/guides-data'
+import { type PublicGuide } from '@/lib/guides-public'
 import { SearchInput } from '@/components/search-input'
 import { ResourceCard } from '@/components/resource-card'
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/scroll-animate'
 
 interface GuideContentProps {
-  guide: Guide
+  guide: PublicGuide
 }
 
 export function GuideContent({ guide }: GuideContentProps) {
@@ -19,7 +19,7 @@ export function GuideContent({ guide }: GuideContentProps) {
   const [copied, setCopied] = useState(false)
   
   const guideTranslation = t.guides[guide.slug as keyof typeof t.guides]
-  const totalResources = getTotalResources(guide)
+  const totalResources = guide.sections.reduce((count, section) => count + section.resources.length, 0)
 
   const filteredSections = useMemo(() => {
     if (!search) return guide.sections

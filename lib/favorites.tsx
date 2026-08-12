@@ -6,7 +6,6 @@ export interface FavoriteResource {
   id: string
   name: string
   description: string
-  url?: string
   guideId: string
   guideTitle: string
   addedAt: number
@@ -34,7 +33,7 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem(FAVORITES_KEY)
     if (stored) {
       try {
-        setFavorites(JSON.parse(stored))
+        setFavorites(JSON.parse(stored).map(({ url: _url, ...favorite }: FavoriteResource & { url?: string }) => favorite))
       } catch {
         setFavorites([])
       }

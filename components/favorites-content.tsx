@@ -79,15 +79,13 @@ export function FavoritesContent() {
                   </p>
 
                   {/* Link */}
-                  <a
-                    href={favorite.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 font-mono text-xs text-terminal-cyan transition-colors hover:text-terminal-green"
+                  <button
+                    onClick={() => window.open(`/go/${favorite.id}`, '_blank', 'noopener,noreferrer')}
+                    className="cursor-pointer flex items-center gap-1 font-mono text-xs text-terminal-cyan transition-colors hover:text-terminal-green"
                   >
                     <ExternalLink className="h-3 w-3" />
                     {t.guide.visit}
-                  </a>
+                  </button>
                 </div>
               </StaggerItem>
             ))}

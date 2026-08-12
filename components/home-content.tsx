@@ -4,17 +4,16 @@ import Link from 'next/link'
 import { useState, useMemo } from 'react'
 import { Heart, Zap, ArrowRight } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
-import { getAllGuides, getTotalResources } from '@/lib/guides-data'
+import { type PublicGuideSummary } from '@/lib/guides-public'
 import { GuideCard } from './guide-card'
 import { SearchInput } from './search-input'
 import { TerminalWindow } from './terminal-window'
 import { ScrollAnimate, StaggerContainer, StaggerItem } from './scroll-animate'
 import { Typewriter } from './typewriter'
 
-export function HomeContent() {
+export function HomeContent({ guides }: { guides: PublicGuideSummary[] }) {
   const { locale, t } = useLocale()
   const [search, setSearch] = useState('')
-  const guides = getAllGuides()
 
   const filteredGuides = useMemo(() => {
     if (!search) return guides
@@ -29,7 +28,7 @@ export function HomeContent() {
   }, [guides, search, t.guides])
 
   const totalResources = useMemo(
-    () => guides.reduce((acc, guide) => acc + getTotalResources(guide), 0),
+    () => guides.reduce((acc, guide) => acc + guide.resourceCount, 0),
     [guides],
   )
 
@@ -131,7 +130,7 @@ export function HomeContent() {
 
             {/* Right: Terminal Window */}
             <ScrollAnimate variant="fadeInRight" delay={0.3} className="flex justify-center lg:justify-end">
-              <TerminalWindow />
+              <TerminalWindow guideCount={guides.length} totalResources={totalResources} />
             </ScrollAnimate>
           </div>
         </div>

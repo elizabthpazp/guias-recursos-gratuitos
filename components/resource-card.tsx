@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 import { Check, Copy, ExternalLink, Heart, Share2 } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
 import { useFavorites, type FavoriteResource } from '@/lib/favorites'
-import { type Resource } from '@/lib/guides-data'
+import { type PublicResource } from '@/lib/guides-public'
 import { cn } from '@/lib/utils'
 
 interface ResourceCardProps {
-  resource: Resource
+  resource: PublicResource
   guideId: string
   guideTitle: string
 }
@@ -23,8 +23,8 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   const favorite = isFavorite(resource.id)
 
   const handleCopyLink = async () => {
-    if (!resource.url) return
-    await navigator.clipboard.writeText(resource.url)
+    const url = new URL(`/go/${resource.id}`, window.location.origin).href
+    await navigator.clipboard.writeText(url)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -34,7 +34,6 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
       id: resource.id,
       name: resource.name,
       description: resource.description,
-      url: resource.url,
       guideId,
       guideTitle,
     }
@@ -42,9 +41,9 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
   }
 
   const shareOnX = () => {
-    if (!resource.url) return
     const text = `Check out ${resource.name}: ${resource.description}`
-    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(resource.url)}`
+    const resourceUrl = new URL(`/go/${resource.id}`, window.location.origin).href
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(resourceUrl)}`
     window.open(url, '_blank')
   }
 
@@ -131,17 +130,17 @@ export function ResourceCard({ resource, guideId, guideTitle }: ResourceCardProp
       </p>
 
       {/* Link */}
-      {resource.url && (
+      {
         <a
-          href={resource.url}
+          href={`/go/${resource.id}`}
           target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-xs text-terminal-green transition-colors hover:underline"
+          rel="nofollow noopener noreferrer"
+          className="flex items-center gap-1 text-xs text-terminal-green transition-colors hover:underline cursor-pointer"
         >
           <ExternalLink className="h-3 w-3" />
           {locale === 'es' ? 'Visitar' : 'Visit'}
         </a>
-      )}
+      }
     </motion.div>
   )
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HomeContent } from '@/components/home-content'
-import { getAllGuides, getTotalResources } from '@/lib/guides-data'
+import { getAllGuides, getPublicGuideSummaries, getTotalResources } from '@/lib/guides-data'
 
 const SITE_URL = 'https://elijs.dev'
 
@@ -72,7 +72,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <HomeContent />
+      <HomeContent guides={getPublicGuideSummaries()} />
     </>
   )
 }
