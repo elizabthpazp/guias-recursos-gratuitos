@@ -10,6 +10,7 @@ import { SearchInput } from './search-input'
 import { TerminalWindow } from './terminal-window'
 import { ScrollAnimate, StaggerContainer, StaggerItem } from './scroll-animate'
 import { Typewriter } from './typewriter'
+import { InstagramBanner } from './instagram-banner'
 
 export function HomeContent({ guides }: { guides: PublicGuideSummary[] }) {
   const { locale, t } = useLocale()
@@ -34,6 +35,7 @@ export function HomeContent({ guides }: { guides: PublicGuideSummary[] }) {
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-background">
+      <InstagramBanner />
       {/* Hero Section */}
       <section className="relative min-w-0 overflow-hidden border-b border-border/30">
         {/* subtle radial vignette over the scanlines */}

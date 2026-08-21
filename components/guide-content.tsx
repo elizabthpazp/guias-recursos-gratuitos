@@ -8,6 +8,7 @@ import { type PublicGuide } from '@/lib/guides-public'
 import { SearchInput } from '@/components/search-input'
 import { ResourceCard } from '@/components/resource-card'
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/scroll-animate'
+import { InstagramBanner } from '@/components/instagram-banner'
 
 interface GuideContentProps {
   guide: PublicGuide
@@ -48,6 +49,7 @@ export function GuideContent({ guide }: GuideContentProps) {
 
   return (
     <main className="min-h-screen bg-background">
+      <InstagramBanner />
       {/* Header */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-8">

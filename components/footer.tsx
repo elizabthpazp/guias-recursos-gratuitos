@@ -2,6 +2,7 @@
 
 import { Coffee, Heart } from 'lucide-react'
 import { useLocale } from '@/lib/locale-context'
+import { DelayedBuyMeACoffee } from '@/components/delayed-buymeacoffee'
 
 const socials = [
   { name: 'Web', url: 'https://www.elijs.dev/' },
@@ -47,16 +48,14 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Donate Button */}
-          <a
-            href="https://buymeacoffee.com/elizabethph"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Donate Button - carga diferida en cliente para no ser detectable al inicio */}
+          <DelayedBuyMeACoffee
+            variant="footer"
             className="flex items-center gap-2 rounded border border-terminal-yellow bg-terminal-yellow/10 px-4 py-2 text-sm text-terminal-yellow transition-colors hover:bg-terminal-yellow/20"
           >
             <Coffee className="h-4 w-4" />
             {t.footer.support}
-          </a>
+          </DelayedBuyMeACoffee>
 
           {/* Made with love */}
           <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
