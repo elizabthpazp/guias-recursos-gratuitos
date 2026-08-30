@@ -178,6 +178,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "66e16cf06a324084976e7d3f6576f7b1"}'
+        />
       </body>
     </html>
   )
