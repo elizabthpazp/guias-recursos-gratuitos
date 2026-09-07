@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Favoritos | elijs.dev',
     description: 'Tus recursos favoritos guardados para acceso rapido.',
-    url: 'https://elijs.dev/favorites',
+    url: 'https://recursos.elijs.dev/favorites',
     images: [
       {
         url: '/programming.png',

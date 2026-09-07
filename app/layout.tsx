@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   display: 'swap',
 })
 
-const SITE_URL = 'https://elijs.dev'
+const SITE_URL = 'https://recursos.elijs.dev'
 const SITE_NAME = 'elijs.dev'
 const DEFAULT_TITLE = 'elijs.dev | Guías y Recursos Gratuitos para Programadores'
 const DEFAULT_DESCRIPTION =

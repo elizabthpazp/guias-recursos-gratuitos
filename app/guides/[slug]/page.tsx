@@ -4,7 +4,7 @@ import { getGuideBySlug, getAllGuides, getTotalResources, toPublicGuide } from '
 import { GuideContent } from '@/components/guide-content'
 import { translations } from '@/lib/i18n'
 
-const SITE_URL = 'https://elijs.dev'
+const SITE_URL = 'https://recursos.elijs.dev'
 
 // Generate static params for all guides
 export function generateStaticParams() {

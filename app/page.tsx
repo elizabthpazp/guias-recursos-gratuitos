@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { HomeContent } from '@/components/home-content'
 import { getAllGuides, getPublicGuideSummaries, getTotalResources } from '@/lib/guides-data'
 
-const SITE_URL = 'https://elijs.dev'
+const SITE_URL = 'https://recursos.elijs.dev'
 
 export const metadata: Metadata = {
   title: 'Guías y Recursos Gratuitos para Programadores',

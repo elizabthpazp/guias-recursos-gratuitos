@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllGuides } from '@/lib/guides-data'
 
-const SITE_URL = 'https://elijs.dev'
+const SITE_URL = 'https://recursos.elijs.dev'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
