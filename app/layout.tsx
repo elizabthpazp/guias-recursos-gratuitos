@@ -128,6 +128,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  other: {
+    'google-adsense-account': 'ca-pub-7847852462671694',
+  },
   icons: {
     icon: [
       { url: '/fav.png', media: '(prefers-color-scheme: light)' },
